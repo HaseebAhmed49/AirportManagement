@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Models/BaggageCheck.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Models/Baggage.cs">
     <Files>
-      <File FileName="AirportManagement.API/Models/Booking.cs" Line="16" Column="36" />
-      <File FileName="AirportManagement.API/Models/BaggageCheck.cs" Line="14" Column="21" />
+      <File FileName="AirportManagement.API/Models/Airport.cs" Line="24" Column="2" />
+      <File FileName="AirportManagement.API/Models/Flights.cs" Line="22" Column="54" />
+      <File FileName="AirportManagement.API/Models/Airline.cs" Line="18" Column="40" />
+      <File FileName="AirportManagement.API/Models/FlightManifest.cs" Line="14" Column="23" />
+      <File FileName="AirportManagement.API/Models/BoardingPass.cs" Line="19" Column="1" />
+      <File FileName="AirportManagement.API/Models/Baggage.cs" Line="14" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +18,7 @@
             <Node name="AirportManagement.API" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="BaggageCheck.cs" selected="True" />
+                <Node name="Baggage.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -25,5 +26,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
 </Properties>

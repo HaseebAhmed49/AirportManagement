@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "W4xh1MefU8HKmZ9ECQ/ljZ4VXtRbZIpxuQiW1zOVpwA=",
+  "Source": "AirportManagement.API",
+  "BasePath": "_content/AirportManagement.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

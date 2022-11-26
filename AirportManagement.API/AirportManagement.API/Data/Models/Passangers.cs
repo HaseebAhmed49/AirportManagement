@@ -26,8 +26,5 @@ namespace AirportManagement.API.Models
 		public ICollection<Booking>? Bookings { get; set; }
 
 		public ICollection<NoFlyList>? NoFlyLists { get; set; }
-
-
 	}
 }
-
