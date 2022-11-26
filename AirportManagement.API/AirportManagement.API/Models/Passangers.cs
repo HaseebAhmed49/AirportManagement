@@ -20,6 +20,14 @@ namespace AirportManagement.API.Models
 		public DateTime CreatedAt { get; set; }
 
 		public DateTime UpdatedAt { get; set; }
+
+		public ICollection<SecurityCheck>? SecurityChecks { get; set; }
+
+		public ICollection<Booking>? Bookings { get; set; }
+
+		public ICollection<NoFlyList>? NoFlyLists { get; set; }
+
+
 	}
 }
 

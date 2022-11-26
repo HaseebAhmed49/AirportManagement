@@ -16,5 +16,9 @@ namespace AirportManagement.API.Models
 		public DateTime CreatedAt { get; set; }
 
 		public DateTime UpdatedAt { get; set; }
-	}
+
+		public ICollection<Flights>? ArrivingFlights { get; set; }
+
+        public ICollection<Flights>? DepartureFlights { get; set; }
+    }
 }
