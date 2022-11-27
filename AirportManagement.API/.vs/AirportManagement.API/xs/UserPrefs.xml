@@ -1,15 +1,16 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Models/Baggage.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/appsettings.json">
     <Files>
-      <File FileName="AirportManagement.API/Models/Airport.cs" Line="24" Column="2" />
-      <File FileName="AirportManagement.API/Models/Flights.cs" Line="22" Column="54" />
-      <File FileName="AirportManagement.API/Models/Airline.cs" Line="18" Column="40" />
-      <File FileName="AirportManagement.API/Models/FlightManifest.cs" Line="14" Column="23" />
-      <File FileName="AirportManagement.API/Models/BoardingPass.cs" Line="19" Column="1" />
-      <File FileName="AirportManagement.API/Models/Baggage.cs" Line="14" Column="23" />
+      <File FileName="AirportManagement.API/Data/AppDbContext.cs" />
+      <File FileName="AirportManagement.API/appsettings.json" Line="11" Column="172" />
+      <File FileName="AirportManagement.API/Program.cs" Line="29" Column="24" />
+      <File FileName="AirportManagement.API/Data/Models/Passangers.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,17 +18,16 @@
           <Node name="AirportManagement.API" expanded="True">
             <Node name="AirportManagement.API" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Baggage.cs" selected="True" />
+              <Node name="Data" expanded="True">
+                <Node name="Models" expanded="True" />
               </Node>
+              <Node name="Database" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
