@@ -14,5 +14,7 @@ namespace AirportManagement.API.Models
 		public DateTime UpdatedAt { get; set; }
 
 		public int PassangerId { get; set; }
+
+		public Passangers Passangers { get; set; }
 	}
 }

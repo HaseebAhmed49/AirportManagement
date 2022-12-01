@@ -22,5 +22,7 @@ namespace AirportManagement.API.Models
 		public ICollection<Baggage>? Baggages { get; set; }
 
 		public int PassangerId { get; set; }
+
+		public Passangers Passangers { get; set; }
 	}
 }

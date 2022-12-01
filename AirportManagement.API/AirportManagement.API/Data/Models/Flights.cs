@@ -19,6 +19,8 @@ namespace AirportManagement.API.Models
 
 		public int AirlineId { get; set; }
 
+		public Airline Airline { get; set; }
+
 		public ICollection<FlightManifest>? FlightManifests { get; set; }
 	}
 }
