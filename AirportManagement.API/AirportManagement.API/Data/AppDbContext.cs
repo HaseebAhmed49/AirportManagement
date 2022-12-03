@@ -1,6 +1,7 @@
 ﻿using System;
 using AirportManagement.API.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 
 namespace AirportManagement.API.Data
 {
@@ -10,10 +11,17 @@ namespace AirportManagement.API.Data
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+            modelBuilder.Entity<Flights>()
+                        .HasOne(p => p.ArrivingAirport)
+                        .WithMany(b => b.ArrivingFlights);
 
-		}
+            modelBuilder.Entity<Flights>()
+                        .HasOne(p => p.DepartureAirport)
+                        .WithMany(b => b.DepartureFlights);
 
-		public DbSet<Airline> Airlines { get; set; }
+        }
+
+        public DbSet<Airline> Airlines { get; set; }
 
 		public DbSet<Airport> Airports { get; set; }
 
