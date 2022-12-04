@@ -112,3 +112,5 @@
 /Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/runtimes/win-x64/native/e_sqlite3.dll
 /Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/Data/PassangerSeedData.json
+/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/Data/SinglePassangerSeedData.json

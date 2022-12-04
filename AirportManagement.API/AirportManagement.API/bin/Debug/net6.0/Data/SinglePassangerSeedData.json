@@ -1,0 +1,80 @@
+[
+  {
+    "FirstName": "Elva",
+    "LastName": "Mary",
+    "DateOfBirth": "1986-04-12",
+    "CountryOfCitizenship": "San Marino",
+    "CountryOfResidence": "Armenia",
+    "PassportNumber": "Hanson",
+    "CreatedAt": "2017-08-27",
+    "UpdatedAt": "2017-04-25",
+    "SecurityChecks": [
+      {
+        "Id": 0,
+        "CheckResult": "eu",
+        "Comments": "Aliquip in cupidatat excepteur excepteur amet consequat labore laborum.",
+        "CreatedAt": "2017-07-04",
+        "UpdatedAt": "2017-02-13",
+        "PassangerId": 0
+      }
+    ],
+    "Bookings": [
+      {
+        "Id": 0,
+        "Status": "ullamco",
+        "BookingPlatform": "anim",
+        "CreatedAt": "2017-08-20",
+        "UpdatedAt": "2017-02-06",
+        "BaggageChecks": [
+          {
+            "Id": 0,
+            "CheckResult": "ad",
+            "CreatedAt": "2017-04-11",
+            "UpdatedAt": "2017-06-19",
+            "BookingId": 0,
+            "PassangerId": 0
+          }
+        ],
+        "FlightManifests": [
+          {
+            "Id": 0,
+            "CreatedAt": "2017-01-18",
+            "UpdatedAt": "2017-02-04",
+            "FlightId": 0,
+            "BookingId": 0
+          }
+        ],
+        "BoardingPasses": [
+          {
+            "Id": 0,
+            "QRCode": "aliquip",
+            "CreatedAt": "2017-03-27",
+            "UpdatedAt": "2017-06-20",
+            "BookingId": 0
+          }
+        ],
+        "Baggages": [
+          {
+            "Id": 0,
+            "WeightInKG": 100.0038,
+            "CreatedDate": "2017-03-01",
+            "UpdatedDate": "2017-07-02",
+            "BookingId": 0
+          }
+        ],
+        "PassangerId": 0
+      }
+    ],
+    "NoFlyLists": [
+      {
+        "Id": 0,
+        "ActiveFrom": "2017-04-30",
+        "ActiveTo": "2017-03-11",
+        "NoFlyReason": "esse",
+        "CreatedAt": "2017-03-17",
+        "UpdatedAt": "2017-03-12",
+        "PassangerId": 0
+      }
+    ]
+  }
+]

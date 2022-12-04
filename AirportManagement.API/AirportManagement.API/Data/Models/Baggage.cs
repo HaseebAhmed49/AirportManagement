@@ -16,4 +16,3 @@ namespace AirportManagement.API.Models
 		public Booking Booking { get; set; }
 	}
 }
-
