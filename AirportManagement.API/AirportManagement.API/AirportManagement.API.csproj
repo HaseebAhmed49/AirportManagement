@@ -41,9 +41,11 @@
     <None Remove="Data\" />
     <None Remove="Data\Models\" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
+    <None Remove="Data\Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Data\Models\" />
+    <Folder Include="Data\Services\" />
   </ItemGroup>
 </Project>

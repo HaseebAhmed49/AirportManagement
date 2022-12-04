@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Models/Airport.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Models/Booking.cs">
     <Files>
-      <File FileName="AirportManagement.API/Data/AppDbContext.cs" Line="16" Column="6" />
-      <File FileName="AirportManagement.API/Data/Models/Airport.cs" Line="24" Column="2" />
-      <File FileName="AirportManagement.API/Data/Models/Flights.cs" Line="26" Column="39" />
+      <File FileName="AirportManagement.API/Data/Models/Passangers.cs" Line="1" Column="1" />
+      <File FileName="AirportManagement.API/Data/Models/Booking.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +12,7 @@
             <Node name="AirportManagement.API" expanded="True">
               <Node name="Data" expanded="True">
                 <Node name="Models" expanded="True">
-                  <Node name="Flights.cs" selected="True" />
+                  <Node name="Booking.cs" selected="True" />
                 </Node>
               </Node>
               <Node name="Database" expanded="True" />
