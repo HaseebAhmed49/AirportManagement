@@ -1,0 +1,155 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14340\viewh17280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+// Passangers\
+\
+[\
+  '\{\{repeat(1)\}\}',\
+  \{\
+    FirstName: '\{\{firstName("female")\}\}',\
+    LastName: '\{\{firstName("female")\}\}',\
+    DateOfBirth: '\{\{date(new Date(1950,0,1), new Date(1999, 11, 31), "YYYY-MM-dd")\}\}',\
+    CountryOfCitizenship: '\{\{country()\}\}',\
+    CountryOfResidence: '\{\{country()\}\}',\
+    PassportNumber: '\{\{firstName()\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+    UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}'\
+  \}\
+]\
+\
+\
+// Security Checks\
+\
+[\
+  '\{\{repeat(1)\}\}',\
+  \{\
+                      Id: '\{\{index()\}\}',\
+        CheckResult:  '\{\{lorem(1, "words")\}\}',\
+          Comments: '\{\{lorem(1, "sentences")\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+            PassangerId: '\{\{index()\}\}'\
+    \}\
+ ]\
+\
+\
+// Booking\
+\
+\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+                        Id: '\{\{index()\}\}',\
+Status: '\{\{lorem(1, "words")\}\}',\
+        BookingPlatform: '\{\{lorem(1, "words")\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+     PassangerId: '\{\{index()\}\}'\
+  \}\
+]\
+\
+// Airline\
+\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+    AirlineCode: '\{\{index()\}\}',\
+    AirlineName: '\{\{lorem(1, "words")\}\}',\
+    AirlineCountry: '\{\{lorem(1, "words")\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}'\
+  \}\
+]\
+\
+// BaggageCheck\
+\
+\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+    Id: '\{\{index()\}\}',\
+    CheckResult: '\{\{lorem(1, "words")\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+            BookingId: '\{\{index()\}\}',\
+            PassangerId: '\{\{index()\}\}'\
+  \}\
+]\
+\
+// Flights\
+\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+    DepartingGate: '\{\{lorem(1, "words")\}\}',\
+    ArrivingGate: '\{\{lorem(1, "words")\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+    UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+    ArrivingAirportId: '\{\{index()\}\}',\
+    DepartureAirportId: '\{\{index()\}\}',\
+    AirlineId: '\{\{index()\}\}'\
+  \}\
+]\
+\
+\
+// FlightsManifest\
+\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+      Id: '\{\{index()\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+            FlightId: '\{\{index()\}\}',\
+            BookingId: '\{\{index()\}\}'\
+  \}\
+]\
+\
+// BoardingPass\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+                        Id: '\{\{index()\}\}',\
+    QRCode: '\{\{lorem(1, "words")\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+            BookingId: '\{\{index()\}\}'\
+   \}\
+]\
+\
+// Baggage\
+\
+\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+      Id: '\{\{index()\}\}',\
+    WeightInKG: '\{\{floating(50, 120)\}\}',\
+    CreatedDate: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedDate: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+            BookingId: '\{\{index()\}\}'\
+    \}\
+    ]\
+\
+\
+// No FlyList\
+\
+[\
+  '\{\{repeat(500)\}\}',\
+  \{\
+            Id: '\{\{index()\}\}',\
+          ActiveFrom: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        ActiveTo: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+      NoFlyReason: '\{\{lorem(1, "words")\}\}',\
+    CreatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+        UpdatedAt: '\{\{date(new Date(2017,0,1), new Date(2017, 7, 31), "YYYY-MM-dd")\}\}',\
+            PassangerId: '\{\{index()\}\}'\
+    \}\
+    ]\
+\
+}
