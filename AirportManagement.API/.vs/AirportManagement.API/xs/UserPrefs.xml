@@ -1,21 +1,41 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/SeedData.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="25" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="31" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="112" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="42" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="53" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="64" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="75" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="86" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="97" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/SeedData/NoFlyListsData.json">
     <Files>
       <File FileName="AirportManagement.API/Data/Models/Passangers.cs" Line="30" Column="2" />
-      <File FileName="AirportManagement.API/Data/Models/NoFlyList.cs" />
-      <File FileName="AirportManagement.API/Data/SeedData.cs" Line="117" Column="14" />
-      <File FileName="AirportManagement.API/Program.cs" Line="33" Column="20" />
+      <File FileName="AirportManagement.API/Data/Models/NoFlyList.cs" Line="20" Column="21" />
+      <File FileName="AirportManagement.API/Data/SeedData.cs" Line="111" Column="18" />
+      <File FileName="AirportManagement.API/Program.cs" />
       <File FileName="AirportManagement.API/Data/Models/SecurityCheck.cs" Line="20" Column="2" />
-      <File FileName="AirportManagement.API/Data/Models/Booking.cs" Line="29" Column="1" />
-      <File FileName="AirportManagement.API/Data/Models/BaggageCheck.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Data/Models/FlightManifest.cs" Line="22" Column="1" />
-      <File FileName="AirportManagement.API/Data/Models/BoardingPass.cs" Line="4" Column="27" />
-      <File FileName="AirportManagement.API/Data/Models/Baggage.cs" Line="4" Column="22" />
-      <File FileName="AirportManagement.API/appsettings.json" Line="1" Column="1" />
-      <File FileName="../../../../../../usr/local/share/dotnet/x64/sdk/6.0.105/Microsoft.Common.CurrentVersion.targets" Line="4716" Column="12" />
+      <File FileName="AirportManagement.API/Data/Models/Booking.cs" Line="26" Column="21" />
+      <File FileName="AirportManagement.API/Data/Models/BaggageCheck.cs" Line="16" Column="18" />
+      <File FileName="AirportManagement.API/Data/Models/FlightManifest.cs" Line="14" Column="18" />
+      <File FileName="AirportManagement.API/Data/Models/BoardingPass.cs" Line="14" Column="13" />
+      <File FileName="AirportManagement.API/Data/Models/Baggage.cs" Line="16" Column="18" />
+      <File FileName="AirportManagement.API/appsettings.json" />
+      <File FileName="../../../../../../usr/local/share/dotnet/x64/sdk/6.0.105/Microsoft.Common.CurrentVersion.targets" />
+      <File FileName="AirportManagement.API/Data/SeedData/SecurityCheckData.json" Line="11" Column="42" />
+      <File FileName="AirportManagement.API/Data/SeedData/PassangerData.json" Line="17" Column="35" />
+      <File FileName="AirportManagement.API/Data/Models/Flights.cs" Line="26" Column="18" />
+      <File FileName="AirportManagement.API/Data/Models/Airport.cs" Line="1" Column="1" />
+      <File FileName="AirportManagement.API/Data/Models/Airline.cs" Line="22" Column="1" />
+      <File FileName="AirportManagement.API/Data/SeedData/NoFlyListsData.json" Line="15" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,9 +43,12 @@
           <Node name="AirportManagement.API" expanded="True">
             <Node name="AirportManagement.API" expanded="True">
               <Node name="Data" expanded="True">
+                <Node name="Models" expanded="True" />
                 <Node name="SeedData" expanded="True" />
               </Node>
-              <Node name="Database" expanded="True" />
+              <Node name="Database" expanded="True">
+                <Node name="AirportManagementDB.db" selected="True" />
+              </Node>
               <Node name="Migrations" expanded="True" />
             </Node>
           </Node>
@@ -33,12 +56,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="25" column="1" />
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="31" column="1" />
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/SeedData.cs" relfile="AirportManagement.API/Data/SeedData.cs" line="112" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

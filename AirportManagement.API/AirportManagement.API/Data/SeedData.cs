@@ -7,70 +7,26 @@ namespace AirportManagement.API.Data
 {
     public static class SeedData
     {
-        private static void SeedUsers(AppDbContext context)
+        private static async Task SeedUsersAsync(AppDbContext context)
         {
-            if (!context.Passangers.Any())
+            if (!context.Airlines.Any())
             {
-                var passangerData = System.IO.File.ReadAllText("Data/SeedData/PassangerData.json");
-                var passangers = JsonConvert.DeserializeObject<List<Passangers>>(passangerData);
-                foreach (var passanger in passangers)
+                var AirlinesData = System.IO.File.ReadAllText("Data/SeedData/AirlineData.json");
+                var Airlines = JsonConvert.DeserializeObject<List<Airline>>(AirlinesData);
+                foreach (var data in Airlines)
                 {
-                    context.Passangers.Add(passanger);
+                    context.Airlines.Add(data);
                 }
                 context.SaveChanges();
             }
 
-            if (!context.SecurityChecks.Any())
+            if (!context.Airports.Any())
             {
-                var securityCheckData = System.IO.File.ReadAllText("Data/SeedData/SecurityCheckData.json");
-                var securityCheck = JsonConvert.DeserializeObject<List<SecurityCheck>>(securityCheckData);
-                foreach (var data in securityCheck)
+                var airportsData = System.IO.File.ReadAllText("Data/SeedData/AirportData.json");
+                var airports = JsonConvert.DeserializeObject<List<Airport>>(airportsData);
+                foreach (var data in airports)
                 {
-                    context.SecurityChecks.Add(data);
-                }
-                context.SaveChanges();
-            }
-
-            if (!context.NoFlyLists.Any())
-            {
-                var noFlyListsData = System.IO.File.ReadAllText("Data/SeedData/NoFlyListsData.json");
-                var noFlyLists = JsonConvert.DeserializeObject<List<NoFlyList>>(noFlyListsData);
-                foreach (var data in noFlyLists)
-                {
-                    context.NoFlyLists.Add(data);
-                }
-                context.SaveChanges();
-            }
-
-            if (!context.FlightManifests.Any())
-            {
-                var FlightManifestsData = System.IO.File.ReadAllText("Data/SeedData/FlightManifestsData.json");
-                var FlightManifests = JsonConvert.DeserializeObject<List<FlightManifest>>(FlightManifestsData);
-                foreach (var data in FlightManifests)
-                {
-                    context.FlightManifests.Add(data);
-                }
-                context.SaveChanges();
-            }
-
-            if (!context.Bookings.Any())
-            {
-                var bookingsData = System.IO.File.ReadAllText("Data/SeedData/BookingData.json");
-                var bookings = JsonConvert.DeserializeObject<List<Booking>>(bookingsData);
-                foreach (var data in bookings)
-                {
-                    context.Bookings.Add(data);
-                }
-                context.SaveChanges();
-            }
-
-            if (!context.BoardingPasses.Any())
-            {
-                var boardingPassData = System.IO.File.ReadAllText("Data/SeedData/BoardingPassData.json");
-                var boardingPass = JsonConvert.DeserializeObject<List<BoardingPass>>(boardingPassData);
-                foreach (var data in boardingPass)
-                {
-                    context.BoardingPasses.Add(data);
+                    context.Airports.Add(data);
                 }
                 context.SaveChanges();
             }
@@ -97,9 +53,94 @@ namespace AirportManagement.API.Data
                 context.SaveChanges();
             }
 
+            if (!context.BoardingPasses.Any())
+            {
+                var boardingPassData = System.IO.File.ReadAllText("Data/SeedData/BoardingPassData.json");
+                var boardingPass = JsonConvert.DeserializeObject<List<BoardingPass>>(boardingPassData);
+                foreach (var data in boardingPass)
+                {
+                    context.BoardingPasses.Add(data);
+                }
+                context.SaveChanges();
+            }
+
+            if (!context.Bookings.Any())
+            {
+                var bookingsData = System.IO.File.ReadAllText("Data/SeedData/BookingData.json");
+                var bookings = JsonConvert.DeserializeObject<List<Booking>>(bookingsData);
+                foreach (var data in bookings)
+                {
+                    context.Bookings.Add(data);
+                }
+                context.SaveChanges();
+            }
+
+            if (!context.FlightManifests.Any())
+            {
+                var FlightManifestsData = System.IO.File.ReadAllText("Data/SeedData/FlightManifestsData.json");
+                var FlightManifests = JsonConvert.DeserializeObject<List<FlightManifest>>(FlightManifestsData);
+                foreach (var data in FlightManifests)
+                {
+                    context.FlightManifests.Add(data);
+                }
+                context.SaveChanges();
+            }
+
+            if (!context.Flights.Any())
+            {
+                var FlightsData = System.IO.File.ReadAllText("Data/SeedData/FlightsData.json");
+                var Flights = JsonConvert.DeserializeObject<List<Flights>>(FlightsData);
+                foreach (var data in Flights)
+                {
+                    context.Flights.Add(data);
+                }
+                await context.SaveChangesAsync();
+            }
+
+            if (!context.NoFlyLists.Any())
+            {
+                var noFlyListsData = System.IO.File.ReadAllText("Data/SeedData/NoFlyListsData.json");
+                var noFlyLists = JsonConvert.DeserializeObject<List<NoFlyList>>(noFlyListsData);
+                foreach (var data in noFlyLists)
+                {
+                    context.NoFlyLists.Add(data);
+                }
+                context.SaveChanges();
+            }
+
+            if (!context.Passangers.Any())
+            {
+                var passangerData = System.IO.File.ReadAllText("Data/SeedData/PassangerData.json");
+                var passangers = JsonConvert.DeserializeObject<List<Passangers>>(passangerData);
+                foreach (var passanger in passangers)
+                {
+                    context.Passangers.Add(passanger);
+                }
+                context.SaveChanges();
+            }
+
+            if (!context.SecurityChecks.Any())
+            {
+                var securityCheckData = System.IO.File.ReadAllText("Data/SeedData/SecurityCheckData.json");
+                var securityCheck = JsonConvert.DeserializeObject<List<SecurityCheck>>(securityCheckData);
+                foreach (var data in securityCheck)
+                {
+                    context.SecurityChecks.Add(data);
+                }
+                context.SaveChanges();
+            }
+
+
+
+
+
+
+
+
+
         }
 
-        public static void Seed(IApplicationBuilder applicationBuilder)
+        public static async void Seed(IApplicationBuilder applicationBuilder)
         {
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
@@ -107,7 +148,7 @@ namespace AirportManagement.API.Data
                 try
                 {
                     context.Database.Migrate();
-                    SeedUsers(context);
+                    await SeedUsersAsync(context);
                 }
                 catch (Exception ex)
                 {

@@ -121,3 +121,6 @@
 /Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/ref/AirportManagement.API.dll
 /Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/AirportManagement.API.pdb
 /Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/AirportManagement.API.genruntimeconfig.cache
+/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/Data/SeedData/AirlineData.json
+/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/Data/SeedData/AirportData.json
+/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/Data/SeedData/FlightsData.json

@@ -17,7 +17,7 @@ namespace AirportManagement.API.Models
 
 		public Airport? ArrivingAirport { get; set; }
 
-		public int DepartingAirportId { get; set; }
+		public int DepartureAirportId { get; set; }
 
         public Airport? DepartureAirport { get; set; }
 

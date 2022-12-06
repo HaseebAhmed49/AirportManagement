@@ -14,7 +14,6 @@ namespace AirportManagement.API.Data.Services
         public Task<Airline> UpdateAirlineById(int id, AirlineVM airlineVM);
 
         public Task<Airline> DeleteAirlineById(int id);
-
     }
 }
 
