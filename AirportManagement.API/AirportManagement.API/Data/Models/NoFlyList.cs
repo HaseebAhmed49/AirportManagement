@@ -17,6 +17,6 @@ namespace AirportManagement.API.Models
 
 		public int PassangerId { get; set; }
 
-		public Passangers Passangers { get; set; }
+		public Passangers? Passangers { get; set; }
 	}
 }

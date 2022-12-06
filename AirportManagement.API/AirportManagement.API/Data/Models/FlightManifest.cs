@@ -11,11 +11,11 @@ namespace AirportManagement.API.Models
 
 		public int FlightId { get; set; }
 
-		public Flights Flights { get; set; }
+		public Flights? Flights { get; set; }
 
 		public int BookingId { get; set; }
 
-		public Booking Booking { get; set; }
+		public Booking? Booking { get; set; }
 	}
 }
 

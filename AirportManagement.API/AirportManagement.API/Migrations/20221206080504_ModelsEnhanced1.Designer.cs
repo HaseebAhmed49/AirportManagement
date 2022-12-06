@@ -3,6 +3,7 @@ using System;
 using AirportManagement.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AirportManagement.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221206080504_ModelsEnhanced1")]
+    partial class ModelsEnhanced1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -122,7 +125,7 @@ namespace AirportManagement.API.Migrations
                     b.Property<int>("PassangerId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("PassangersId")
+                    b.Property<int>("PassangersId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -179,7 +182,7 @@ namespace AirportManagement.API.Migrations
                     b.Property<int>("PassangerId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("PassangersId")
+                    b.Property<int>("PassangersId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Status")
@@ -211,7 +214,7 @@ namespace AirportManagement.API.Migrations
                     b.Property<int>("FlightId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("FlightsId")
+                    b.Property<int>("FlightsId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -252,7 +255,7 @@ namespace AirportManagement.API.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("DepartureAirportId")
+                    b.Property<int>("DepartureAirportId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -291,7 +294,7 @@ namespace AirportManagement.API.Migrations
                     b.Property<int>("PassangerId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("PassangersId")
+                    b.Property<int>("PassangersId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -398,7 +401,9 @@ namespace AirportManagement.API.Migrations
 
                     b.HasOne("AirportManagement.API.Models.Passangers", "Passangers")
                         .WithMany()
-                        .HasForeignKey("PassangersId");
+                        .HasForeignKey("PassangersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Booking");
 
@@ -420,7 +425,9 @@ namespace AirportManagement.API.Migrations
                 {
                     b.HasOne("AirportManagement.API.Models.Passangers", "Passangers")
                         .WithMany("Bookings")
-                        .HasForeignKey("PassangersId");
+                        .HasForeignKey("PassangersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Passangers");
                 });
@@ -435,7 +442,9 @@ namespace AirportManagement.API.Migrations
 
                     b.HasOne("AirportManagement.API.Models.Flights", "Flights")
                         .WithMany("FlightManifests")
-                        .HasForeignKey("FlightsId");
+                        .HasForeignKey("FlightsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Booking");
 
@@ -458,7 +467,9 @@ namespace AirportManagement.API.Migrations
 
                     b.HasOne("AirportManagement.API.Models.Airport", "DepartureAirport")
                         .WithMany("DepartureFlights")
-                        .HasForeignKey("DepartureAirportId");
+                        .HasForeignKey("DepartureAirportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Airline");
 
@@ -471,7 +482,9 @@ namespace AirportManagement.API.Migrations
                 {
                     b.HasOne("AirportManagement.API.Models.Passangers", "Passangers")
                         .WithMany("NoFlyLists")
-                        .HasForeignKey("PassangersId");
+                        .HasForeignKey("PassangersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Passangers");
                 });

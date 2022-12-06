@@ -15,15 +15,15 @@ namespace AirportManagement.API.Models
 
 		public int ArrivingAirportId { get; set; }
 
-		public Airport ArrivingAirport { get; set; }
+		public Airport? ArrivingAirport { get; set; }
 
 		public int DepartingAirportId { get; set; }
 
-        public Airport DepartureAirport { get; set; }
+        public Airport? DepartureAirport { get; set; }
 
         public int AirlineId { get; set; }
 
-		public Airline Airline { get; set; }
+		public Airline? Airline { get; set; }
 
 		public ICollection<FlightManifest>? FlightManifests { get; set; }
 	}
