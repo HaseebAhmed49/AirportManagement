@@ -9,6 +9,8 @@ namespace AirportManagement.API.Data.Services
 
         public Task<Airline> GetAirLineById(int id);
 
+        public Task<Airline> GetAirlineWithFlightsById(int id);
+
         public Task<Airline> AddAirline(AirlineVM airlineVM);
 
         public Task<Airline> UpdateAirlineById(int id, AirlineVM airlineVM);
