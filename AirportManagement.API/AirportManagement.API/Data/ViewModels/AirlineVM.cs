@@ -13,7 +13,7 @@ namespace AirportManagement.API.Models
 
         public DateTime UpdatedAt { get; set; }
 
-		public ICollection<Flights>? Flights { get; set; }
+		public List<FlightsForAirlineVM>? Flights { get; set; }
 	}
 }
 

@@ -39,9 +39,30 @@ namespace AirportManagement.API.Data.Services
             return isAirlineExist!;
         }
 
-        public async Task<Airline> GetAirlineWithFlightsById(int id)
+        public async Task<AirlineVM> GetAirlineWithFlightsById(int id)
         {
-            var airline = await _context.Airlines.Include(a => a.Flights).FirstOrDefaultAsync() ;
+            var airline = await _context.Airlines.Where(al => al.Id == id).Select(a => new AirlineVM()
+            {
+                AirlineCode = a.AirlineCode,
+                AirlineCountry = a.AirlineCountry,
+                AirlineName = a.AirlineName,
+                CreatedAt = a.CreatedAt,
+                UpdatedAt = a.UpdatedAt,
+                Flights = _context.Flights.Where(i => i.Id == a.Id).Select(fl => new FlightsForAirlineVM()
+                {
+                    ArrivingGate = fl.ArrivingGate,
+                    CreatedAt = fl.CreatedAt,
+                    DepartingGate = fl.DepartingGate,
+                    UpdatedAt = fl.UpdatedAt,
+                    ArrivingAirport = _context.Airports.Where(ap => ap.Id == fl.Id).FirstOrDefault(),
+                    DepartureAirport = _context.Airports.Where(ap => ap.Id == fl.Id).FirstOrDefault(),
+                    FlightManifests = _context.FlightManifests.Where(i => i.Id == fl.Id).Select(fm => new FlightManifestForFlightsVM()
+                    {
+                        CreatedAt = fm.CreatedAt,
+                        UpdatedAt = fm.UpdatedAt
+                    }).ToList()
+                }).ToList()
+            }).FirstOrDefaultAsync();
             return airline;
         }
 
