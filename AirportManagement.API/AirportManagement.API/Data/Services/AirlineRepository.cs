@@ -31,17 +31,22 @@ namespace AirportManagement.API.Data.Services
         public async Task<Airline> DeleteAirlineById(int id)
         {
             var isAirlineExist = await _context.Airlines.FirstOrDefaultAsync(a => a.Id == id);
-            if(isAirlineExist!=null)
+            var areFlightsExist = await _context.Flights.Where(x => x.AirlineId == id).ToListAsync();
+            if(isAirlineExist!=null && areFlightsExist != null)
             {
                 _context.Airlines.Remove(isAirlineExist);
+                foreach (var flight in areFlightsExist)
+                {
+                    _context.Flights.Remove(flight);
+                }
                 await _context.SaveChangesAsync();
             }
             return isAirlineExist!;
         }
 
-        public async Task<AirlineVM> GetAirlineWithFlightsById(int id)
+        public async Task<AirlineForFlightsVM> GetAirlineWithFlightsById(int id)
         {
-            var airline = await _context.Airlines.Where(al => al.Id == id).Select(a => new AirlineVM()
+            var airline = await _context.Airlines.Where(al => al.Id == id).Select(a => new AirlineForFlightsVM()
             {
                 AirlineCode = a.AirlineCode,
                 AirlineCountry = a.AirlineCountry,
@@ -61,9 +66,9 @@ namespace AirportManagement.API.Data.Services
                         CreatedAt = fm.CreatedAt,
                         UpdatedAt = fm.UpdatedAt
                     }).ToList()
-                }).ToList()
+                }).ToList(), 
             }).FirstOrDefaultAsync();
-            return airline;
+            return airline!;
         }
 
         public async Task<Airline> GetAirLineById(int id)
