@@ -18,8 +18,6 @@ namespace AirportManagement.API.Models
 
     public class AirportForFlightsVM
     {
-        public int Id { get; set; }
-
         public string AirportName { get; set; }
 
         public string Country { get; set; }
@@ -35,5 +33,6 @@ namespace AirportManagement.API.Models
         public ICollection<FlightsForAirportVM>? ArrivingFlights { get; set; }
 
         public ICollection<FlightsForAirportVM>? DepartureFlights { get; set; }
+
     }
 }

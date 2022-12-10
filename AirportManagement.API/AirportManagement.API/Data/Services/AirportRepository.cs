@@ -60,34 +60,61 @@ namespace AirportManagement.API.Data.Services
             return null!;
         }
 
-        public Task<AirlineForFlightsVM> GetAirportWithFlightsById(int id)
+        public async Task<AirportForFlightsVM> GetAirportWithFlightsById(int id)
         {
-            throw new NotImplementedException();
+            var airport = await _context.Airports.Where(a => a.Id == id).Select(a => new AirportForFlightsVM()
+            {
+                AirportName = a.AirportName,
+                CreatedAt = a.CreatedAt,
+                UpdatedAt = a.UpdatedAt,
+                City = a.City,
+                Country = a.Country,
+                State = a.State,
+                ArrivingFlights = _context.Flights.Where(f => f.Id == a.Id).Select(af => new FlightsForAirportVM()
+                {
+                    CreatedAt = af.CreatedAt,
+                    UpdatedAt = af.UpdatedAt,
+                    ArrivingGate = af.ArrivingGate,
+                    DepartingGate = af.DepartingGate,
+                    Airline = _context.Airlines.Where(airline => airline.Id == af.AirlineId).Select(air => new AirlineVM()
+                    {
+                        AirlineCode = air.AirlineCode,
+                        AirlineCountry = air.AirlineCountry,
+                        AirlineName = air.AirlineName,
+                        CreatedAt = air.CreatedAt,
+                        UpdatedAt = air.UpdatedAt
+                    }).FirstOrDefault(),
+                    FlightManifests = _context.FlightManifests.Where(i => i.Id == af.Id).Select(fm => new FlightManifestForFlightsVM()
+                    {
+                        CreatedAt = fm.CreatedAt,
+                        UpdatedAt = fm.UpdatedAt,
+                        Booking = _context.Bookings.Where(b => b.Id == fm.BookingId).FirstOrDefault()
+                    }).ToList()
+                }).ToList(),
+                DepartureFlights = _context.Flights.Where(f => f.Id == a.Id).Select(af => new FlightsForAirportVM()
+                {
+                    CreatedAt = af.CreatedAt,
+                    UpdatedAt = af.UpdatedAt,
+                    ArrivingGate = af.ArrivingGate,
+                    DepartingGate = af.DepartingGate,
+                    Airline = _context.Airlines.Where(airline => airline.Id == af.AirlineId).Select(air => new AirlineVM()
+                    {
+                        AirlineCode = air.AirlineCode,
+                        AirlineCountry = air.AirlineCountry,
+                        AirlineName = air.AirlineName,
+                        CreatedAt = air.CreatedAt,
+                        UpdatedAt = air.UpdatedAt
+                    }).FirstOrDefault(),
+                    FlightManifests = _context.FlightManifests.Where(i => i.Id == af.Id).Select(fm => new FlightManifestForFlightsVM()
+                    {
+                        CreatedAt = fm.CreatedAt,
+                        UpdatedAt = fm.UpdatedAt,
+                        Booking = _context.Bookings.Where(b => b.Id == fm.BookingId).FirstOrDefault()
+                    }).ToList()
+                }).ToList()
+            }).FirstOrDefaultAsync();
+            return airport!;
         }
-
-        //public async Task<AirlineForFlightsVM> GetAirportWithFlightsById(int id)
-        //{
-        //    //var airport = await _context.Airports.Where(a => a.Id == id).Select(async a => new AirportForFlightsVM()
-        //    //{
-        //    //    AirportName = a.AirportName,
-        //    //    CreatedAt = a.CreatedAt,
-        //    //    UpdatedAt = a.UpdatedAt,
-        //    //    City = a.City,
-        //    //    Country = a.Country,
-        //    //    State = a.State,
-        //    //    ArrivingFlights = _context.Flights.Where(i => i.Id == a.Id).Select(async fl => new FlightsForAirportVM()
-        //    //    {
-        //    //        Airline =  _context.Airlines.Where(al => al.Id == fl.AirlineId).FirstOrDefault(),
-        //    //        ArrivingGate = fl.ArrivingGate,
-        //    //        DepartingGate = fl.DepartingGate,
-        //    //        CreatedAt = fl.CreatedAt,
-        //    //        UpdatedAt = fl.UpdatedAt,
-        //    //        FlightManifests = _context.FlightManifests.Where(i => i.Id == fl.Id).ToList()
-        //    //    }).ToList(),
-        //    //}).FirstOrDefaultAsync();
-        //    //return airport!;
-
-        //}
 
         public async Task<List<Airport>> GetAllAirports() => await _context.Airports.ToListAsync();
 
@@ -107,4 +134,3 @@ namespace AirportManagement.API.Data.Services
         }
     }
 }
-

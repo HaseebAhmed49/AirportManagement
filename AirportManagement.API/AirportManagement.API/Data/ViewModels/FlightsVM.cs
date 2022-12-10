@@ -47,9 +47,9 @@ namespace AirportManagement.API.Models
 
         public DateTime UpdatedAt { get; set; }
 
-        public Airline? Airline { get; set; }
+        public AirlineVM? Airline { get; set; }
 
-        public ICollection<FlightManifest>? FlightManifests { get; set; }
+        public ICollection<FlightManifestForFlightsVM>? FlightManifests { get; set; }
     }
 
 

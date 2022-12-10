@@ -46,6 +46,23 @@ namespace AirportManagement.API.Controllers
             }
         }
 
+        [HttpGet("Get-Airport-With-Flights-By-Id/{id}")]
+        public async Task<IActionResult> GetAirportWithFlightsById(int id)
+        {
+            try
+            {
+                if (id < 0) return BadRequest("Airport Id can't be negative");
+                var airport = await _airportRepository.GetAirportWithFlightsById(id);
+                if (airport != null)
+                    return Ok(airport);
+                return NotFound($"No Airport Exist with Respective Id {id}");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("add-new-airport")]
         public async Task<IActionResult> AddAirline([FromBody]AirportVM airportVM)
         {

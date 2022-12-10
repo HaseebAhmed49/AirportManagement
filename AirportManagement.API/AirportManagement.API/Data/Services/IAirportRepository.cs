@@ -9,7 +9,7 @@ namespace AirportManagement.API.Data.Services
 
         public Task<AirportVM> GetAirportById(int id);
 
-        public Task<AirlineForFlightsVM> GetAirportWithFlightsById(int id);
+        public Task<AirportForFlightsVM> GetAirportWithFlightsById(int id);
 
         public Task<Airport> AddAirport(AirportVM airportVM);
 
