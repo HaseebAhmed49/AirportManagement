@@ -42,10 +42,16 @@
     <None Remove="Data\Models\" />
     <None Remove="Microsoft.EntityFrameworkCore.Sqlite" />
     <None Remove="Data\Services\" />
+    <None Remove="Data\Services\Airline\" />
+    <None Remove="Data\Services\Airport\" />
+    <None Remove="Data\Services\Airline %28copy%29\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Data\Models\" />
     <Folder Include="Data\Services\" />
+    <Folder Include="Data\Services\Airline\" />
+    <Folder Include="Data\Services\Airport\" />
+    <Folder Include="Data\Services\Passanger\" />
   </ItemGroup>
 </Project>

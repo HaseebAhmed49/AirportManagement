@@ -14,6 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Name=S
 
 builder.Services.AddScoped<IAirLineRepository,AirlineRepository>();
 builder.Services.AddScoped<IAirportRepository, AirportRepository>();
+builder.Services.AddScoped<IPassangerRepository, PassangerRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
