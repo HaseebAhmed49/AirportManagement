@@ -9,8 +9,18 @@ namespace AirportManagement.API.Models
 
 		public DateTime UpdatedAt { get; set; }
 
-		public int BookingId { get; set; }
+		public Booking? Booking { get; set; }
 
-		public int PassangerId { get; set; }
+		public Passangers? Passanger { get; set; }
 	}
+
+    public class BaggageCheckForPassangerVM
+    {
+        public string CheckResult { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+    }
+
 }

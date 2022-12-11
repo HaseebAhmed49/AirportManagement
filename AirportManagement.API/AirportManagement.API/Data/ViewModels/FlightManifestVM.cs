@@ -20,5 +20,13 @@ namespace AirportManagement.API.Models
 
         public Booking? Booking { get; set; }
 	}
+
+    public class FlightManifestForPassangersVM
+    {
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+    }
+
 }
 

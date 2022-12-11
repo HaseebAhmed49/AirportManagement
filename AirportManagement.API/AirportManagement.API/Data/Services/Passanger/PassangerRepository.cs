@@ -47,33 +47,6 @@ namespace AirportManagement.API.Data.Services
         //    return isPassangerExist!;
         //}
 
-        //public async Task<AirlineForFlightsVM> GetAirlineWithFlightsById(int id)
-        //{
-        //    var airline = await _context.Airlines.Where(al => al.Id == id).Select(a => new AirlineForFlightsVM()
-        //    {
-        //        AirlineCode = a.AirlineCode,
-        //        AirlineCountry = a.AirlineCountry,
-        //        AirlineName = a.AirlineName,
-        //        CreatedAt = a.CreatedAt,
-        //        UpdatedAt = a.UpdatedAt,
-        //        Flights = _context.Flights.Where(i => i.Id == a.Id).Select(fl => new FlightsForAirlineVM()
-        //        {
-        //            ArrivingGate = fl.ArrivingGate,
-        //            CreatedAt = fl.CreatedAt,
-        //            DepartingGate = fl.DepartingGate,
-        //            UpdatedAt = fl.UpdatedAt,
-        //            ArrivingAirport = _context.Airports.Where(ap => ap.Id == fl.Id).FirstOrDefault(),
-        //            DepartureAirport = _context.Airports.Where(ap => ap.Id == fl.Id).FirstOrDefault(),
-        //            FlightManifests = _context.FlightManifests.Where(i => i.Id == fl.Id).Select(fm => new FlightManifestForFlightsVM()
-        //            {
-        //                CreatedAt = fm.CreatedAt,
-        //                UpdatedAt = fm.UpdatedAt
-        //            }).ToList()
-        //        }).ToList(), 
-        //    }).FirstOrDefaultAsync();
-        //    return airline!;
-        //}
-
         public async Task<Passangers> GetPassangerById(int id)
         {
             return await _context.Passangers.FirstOrDefaultAsync(p=> p.Id == id);
@@ -93,6 +66,67 @@ namespace AirportManagement.API.Data.Services
                 await _context.SaveChangesAsync();
             }
             return isPassangerExist!;
+        }
+
+        public async Task<PassangersWithDetailsVM> GetPassangerWithDetailsById(int id)
+        {
+            var passanger = await _context.Passangers.Where(p => p.Id == id).Select(pn => new PassangersWithDetailsVM()
+            {
+                FirstName = pn.FirstName,
+                LastName = pn.LastName,
+                DateOfBirth = pn.DateOfBirth,
+                PassportNumber = pn.PassportNumber,
+                CountryOfCitizenship = pn.CountryOfCitizenship,
+                CountryOfResidence = pn.CountryOfResidence,
+                CreatedAt = pn.CreatedAt,
+                UpdatedAt = pn.UpdatedAt,
+                Bookings = _context.Bookings.Where(b => b.Id == pn.Id).Select(bn => new BookingForPassangerVM()
+                {
+                    BookingPlatform = bn.BookingPlatform,
+                    CreatedAt = bn.CreatedAt,
+                    UpdatedAt = bn.UpdatedAt,
+                    Status = bn.Status,
+                    BaggageChecks = _context.BaggageChecks.Where(bgc => bgc.Id == bn.Id).Select(bgcn => new BaggageCheckForPassangerVM()
+                    {
+                        CheckResult = bgcn.CheckResult,
+                        CreatedAt = bgcn.CreatedAt,
+                        UpdatedAt = bgcn.UpdatedAt
+                    }).ToList(),
+                    Baggages = _context.Baggages.Where(bg => bg.Id == bn.Id).Select(bgn => new BaggageForPassangerVM()
+                    {
+                        CreatedDate = bgn.CreatedDate,
+                        UpdatedDate = bgn.UpdatedDate,
+                        WeightInKG = bgn.WeightInKG
+                    }).ToList(),
+                    BoardingPasses = _context.BoardingPasses.Where(bp => bp.Id == bn.Id).Select(bpn => new BoardingPassForPassangerVM()
+                    {
+                        CreatedAt = bpn.CreatedAt,
+                        QRCode = bpn.QRCode,
+                        UpdatedAt = bpn.UpdatedAt
+                    }).ToList(),
+                    FlightManifests = _context.FlightManifests.Where(fm => fm.Id == bn.Id).Select(fmn => new FlightManifestForPassangersVM()
+                    {
+                        CreatedAt = fmn.CreatedAt,
+                        UpdatedAt = fmn.UpdatedAt,
+                    }).ToList(),
+                }).ToList(),
+                SecurityChecks = _context.SecurityChecks.Where(sc => sc.Id == pn.Id).Select(scn => new SecurityCheckForPassangersVM()
+                {
+                    CreatedAt = scn.CreatedAt,
+                    UpdatedAt = scn.UpdatedAt,
+                    CheckResult = scn.CheckResult,
+                    Comments = scn.Comments
+                }).ToList(),
+                NoFlyLists = _context.NoFlyLists.Where(nfl => nfl.Id == pn.Id).Select(nfln => new NoFlyListForPassangerVM()
+                {
+                    CreatedAt = nfln.CreatedAt,
+                    UpdatedAt = nfln.UpdatedAt,
+                    ActiveFrom = nfln.ActiveFrom,
+                    ActiveTo = nfln.ActiveTo,
+                    NoFlyReason = nfln.NoFlyReason
+                }).ToList(),
+            }).FirstOrDefaultAsync();
+            return passanger!;
         }
     }
 }

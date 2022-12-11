@@ -11,13 +11,30 @@ using Microsoft.AspNetCore.Mvc;
 namespace AirportManagement.API.Controllers
 {
     [Route("api/[controller]")]
-    public class PassangerssController : Controller
+    public class PassangersController : Controller
     {
         private readonly IPassangerRepository _passangerRepository;
 
-        public PassangerssController(IPassangerRepository passangerRepository)
+        public PassangersController(IPassangerRepository passangerRepository)
         {
             _passangerRepository = passangerRepository;
+        }
+
+        [HttpGet("Get-Passanger-With-Details-By-Id/{id}")]
+        public async Task<IActionResult> GetPassangerWithDetailsById(int id)
+        {
+            try
+            {
+                if (id < 0) return BadRequest("Passanger Id can't be negative");
+                var passanger = await _passangerRepository.GetPassangerWithDetailsById(id);
+                if (passanger != null)
+                    return Ok(passanger);
+                return NotFound($"No Passanger Exist with Respective Id {id}");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("Get-All-Passangers")]

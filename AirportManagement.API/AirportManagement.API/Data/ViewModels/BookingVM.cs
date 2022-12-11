@@ -19,6 +19,25 @@ namespace AirportManagement.API.Models
 
 		public ICollection<Baggage>? Baggages { get; set; }
 
-		public int PassangerId { get; set; }
-	}
+		public Passangers Passanger { get; set; }
+    }
+
+        public class BookingForPassangerVM
+        {
+            public string Status { get; set; }
+
+            public string BookingPlatform { get; set; }
+
+            public DateTime CreatedAt { get; set; }
+
+            public DateTime UpdatedAt { get; set; }
+
+            public ICollection<BaggageCheckForPassangerVM>? BaggageChecks { get; set; }
+
+            public ICollection<FlightManifestForPassangersVM>? FlightManifests { get; set; }
+
+            public ICollection<BoardingPassForPassangerVM>? BoardingPasses { get; set; }
+
+            public ICollection<BaggageForPassangerVM>? Baggages { get; set; }
+        }
 }

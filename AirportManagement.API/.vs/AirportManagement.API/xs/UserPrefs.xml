@@ -1,17 +1,13 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/ViewModels/PassangersVM.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs">
     <Files>
-      <File FileName="AirportManagement.API/Data/Services/IAirportRepository.cs" Line="12" Column="41" />
-      <File FileName="AirportManagement.API/Data/Services/AirportRepository.cs" Line="106" Column="50" />
-      <File FileName="AirportManagement.API/Data/ViewModels/AirportVM.cs" Line="35" Column="47" />
-      <File FileName="AirportManagement.API/Data/ViewModels/FlightsVM.cs" Line="53" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/FlightManifestVM.cs" Line="22" Column="3" />
-      <File FileName="AirportManagement.API/Controllers/AirportsController.cs" Line="55" Column="82" />
-      <File FileName="AirportManagement.API/Data/Models/FlightManifest.cs" Line="18" Column="1" />
-      <File FileName="AirportManagement.API/Data/Services/AirlineRepository.cs" Line="64" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/AirlineVM.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/BookingVM.cs" Line="19" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/PassangersVM.cs" Line="27" Column="3" />
+      <File FileName="AirportManagement.API/Controllers/PassangersController.cs" />
+      <File FileName="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs" Line="1" Column="1" />
+      <File FileName="AirportManagement.API/Data/Services/Passanger/IPassangerRepository.cs" />
+      <File FileName="AirportManagement.API/Program.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,10 +17,12 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True">
                 <Node name="Models" expanded="True" />
-                <Node name="Services" expanded="True" />
-                <Node name="ViewModels" expanded="True">
-                  <Node name="PassangersVM.cs" selected="True" />
+                <Node name="Services" expanded="True">
+                  <Node name="Airline" expanded="True" />
+                  <Node name="Airport" expanded="True" />
+                  <Node name="Passanger" expanded="True" />
                 </Node>
+                <Node name="ViewModels" expanded="True" />
               </Node>
               <Node name="Database" expanded="True" />
               <Node name="Migrations" expanded="True" />
@@ -34,11 +32,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
