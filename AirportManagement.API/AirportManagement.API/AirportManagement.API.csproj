@@ -45,6 +45,7 @@
     <None Remove="Data\Services\Airline\" />
     <None Remove="Data\Services\Airport\" />
     <None Remove="Data\Services\Airline %28copy%29\" />
+    <None Remove="Data\Services\Baggage\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -53,5 +54,6 @@
     <Folder Include="Data\Services\Airline\" />
     <Folder Include="Data\Services\Airport\" />
     <Folder Include="Data\Services\Passanger\" />
+    <Folder Include="Data\Services\Baggage\" />
   </ItemGroup>
 </Project>

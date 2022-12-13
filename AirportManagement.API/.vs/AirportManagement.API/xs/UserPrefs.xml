@@ -1,14 +1,5 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs">
-    <Files>
-      <File FileName="AirportManagement.API/Controllers/PassangersController.cs" />
-      <File FileName="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Data/Services/Passanger/IPassangerRepository.cs" />
-      <File FileName="AirportManagement.API/Program.cs" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -16,24 +7,29 @@
             <Node name="AirportManagement.API" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True">
-                <Node name="Models" expanded="True" />
+                <Node name="Models" expanded="True">
+                  <Node name="SecurityCheck.cs" selected="True" />
+                </Node>
                 <Node name="Services" expanded="True">
                   <Node name="Airline" expanded="True" />
-                  <Node name="Airport" expanded="True" />
+                  <Node name="Baggage" expanded="True" />
                   <Node name="Passanger" expanded="True" />
                 </Node>
                 <Node name="ViewModels" expanded="True" />
               </Node>
-              <Node name="Database" expanded="True" />
-              <Node name="Migrations" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="106" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

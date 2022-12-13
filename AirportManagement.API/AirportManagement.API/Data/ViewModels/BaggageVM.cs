@@ -21,5 +21,16 @@ namespace AirportManagement.API.Models
         public DateTime UpdatedDate { get; set; }
     }
 
+    public class BaggageWithDetailsVM
+    {
+        public double WeightInKG { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+
+        public DateTime UpdatedDate { get; set; }
+
+        public BookingForBaggagesVM? Booking { get; set; }
+    }
+
 }
 

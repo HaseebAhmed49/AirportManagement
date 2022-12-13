@@ -22,22 +22,41 @@ namespace AirportManagement.API.Models
 		public Passangers Passanger { get; set; }
     }
 
-        public class BookingForPassangerVM
-        {
-            public string Status { get; set; }
+    public class BookingForPassangerVM
+    {
+        public string Status { get; set; }
 
-            public string BookingPlatform { get; set; }
+        public string BookingPlatform { get; set; }
 
-            public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
 
-            public DateTime UpdatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
-            public ICollection<BaggageCheckForPassangerVM>? BaggageChecks { get; set; }
+        public ICollection<BaggageCheckForPassangerVM>? BaggageChecks { get; set; }
 
-            public ICollection<FlightManifestForPassangersVM>? FlightManifests { get; set; }
+        public ICollection<FlightManifestForPassangersVM>? FlightManifests { get; set; }
 
-            public ICollection<BoardingPassForPassangerVM>? BoardingPasses { get; set; }
+        public ICollection<BoardingPassForPassangerVM>? BoardingPasses { get; set; }
 
-            public ICollection<BaggageForPassangerVM>? Baggages { get; set; }
-        }
+        public ICollection<BaggageForPassangerVM>? Baggages { get; set; }
+    }
+
+    public class BookingForBaggagesVM
+    {
+        public string Status { get; set; }
+
+        public string BookingPlatform { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+
+        public ICollection<BaggageCheckForPassangerVM>? BaggageChecks { get; set; }
+
+        public ICollection<FlightManifestForPassangersVM>? FlightManifests { get; set; }
+
+        public ICollection<BoardingPassForPassangerVM>? BoardingPasses { get; set; }
+
+        public PassangersForBaggageVM? Passangers { get; set; }
+    }
 }
