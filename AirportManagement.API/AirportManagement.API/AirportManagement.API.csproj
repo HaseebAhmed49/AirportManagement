@@ -44,7 +44,6 @@
     <None Remove="Data\Services\" />
     <None Remove="Data\Services\Airline\" />
     <None Remove="Data\Services\Airport\" />
-    <None Remove="Data\Services\Airline %28copy%29\" />
     <None Remove="Data\Services\Baggage\" />
   </ItemGroup>
   <ItemGroup>
