@@ -52,6 +52,24 @@ namespace AirportManagement.API.Models
         public ICollection<FlightManifestForFlightsVM>? FlightManifests { get; set; }
     }
 
+    public class FlightsWithDetailsVM
+    {
+        public string DepartingGate { get; set; }
+
+        public string ArrivingGate { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+
+        public Airport ArrivingAirport { get; set; }
+
+        public Airport DepartingAirport { get; set; }
+
+        public Airline Airline { get; set; }
+
+        public ICollection<FlightManifestForFlightsVM>? FlightManifests { get; set; }
+    }
 
 }
 
