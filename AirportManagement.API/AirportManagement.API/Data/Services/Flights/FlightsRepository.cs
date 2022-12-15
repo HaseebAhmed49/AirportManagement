@@ -13,83 +13,104 @@ namespace AirportManagement.API.Data.Services
             _context = context;
         }
 
-        public async Task<Airline> AddAirline(AirlineVM airlineVM)
+        public async Task<Flights> AddFlight(FlightsVM flightsVM)
         {
-            Airline airline = new Airline
+            Flights flight = new Flights()
             {
-                AirlineName = airlineVM.AirlineName,
-                AirlineCode = airlineVM.AirlineCode,
-                AirlineCountry = airlineVM.AirlineCountry,
-                CreatedAt = airlineVM.CreatedAt,
-                UpdatedAt = airlineVM.UpdatedAt
+                AirlineId = flightsVM.AirlineId,
+                ArrivingAirportId = flightsVM.ArrivingAirportId,
+                ArrivingGate = flightsVM.ArrivingGate,
+                CreatedAt = DateTime.Now,
+                DepartureAirportId = flightsVM.DepartingAirportId,
+                DepartingGate = flightsVM.DepartingGate,
+                UpdatedAt = DateTime.Now,
             };
-            await _context.Airlines.AddAsync(airline);
+            foreach (var item in flightsVM.FlightManifests)
+            {
+                var isFound = await _context.FlightManifests.FirstOrDefaultAsync(fm => fm.Id == item);
+                flight.FlightManifests.Add(isFound);
+            }
+            await _context.Flights.AddAsync(flight);
             await _context.SaveChangesAsync();
-            return airline;
+            return flight; 
         }
 
-        public async Task<Airline> DeleteAirlineById(int id)
+        public async Task<Flights> DeleteFlightById(int id)
         {
-            var isAirlineExist = await _context.Airlines.FirstOrDefaultAsync(a => a.Id == id);
-            var areFlightsExist = await _context.Flights.Where(x => x.AirlineId == id).ToListAsync();
-            if(isAirlineExist!=null && areFlightsExist != null)
+            var isFlightExist = await _context.Flights.FirstOrDefaultAsync(f => f.Id == id);
+            if (isFlightExist != null)
             {
-                _context.Airlines.Remove(isAirlineExist);
-                foreach (var flight in areFlightsExist)
-                {
-                    _context.Flights.Remove(flight);
-                }
+                _context.Flights.Remove(isFlightExist);
                 await _context.SaveChangesAsync();
             }
-            return isAirlineExist!;
+            return isFlightExist!;
         }
 
-        public async Task<AirlineForFlightsVM> GetAirlineWithFlightsById(int id)
+        public async Task<List<Flights>> GetAllFlights() => await _context.Flights.ToListAsync();
+
+        public async Task<Flights> GetFlightById(int id)
         {
-            var airline = await _context.Airlines.Where(al => al.Id == id).Select(a => new AirlineForFlightsVM()
+            return await _context.Flights.FirstOrDefaultAsync(f => f.Id == id);
+        }
+
+        public async Task<FlightsWithDetailsVM> GetFlightsWithDetailsById(int id)
+        {
+            var flightWithDetails = await _context.Flights.Where(f => f.Id == id).Select(fd => new FlightsWithDetailsVM()
             {
-                AirlineCode = a.AirlineCode,
-                AirlineCountry = a.AirlineCountry,
-                AirlineName = a.AirlineName,
-                CreatedAt = a.CreatedAt,
-                UpdatedAt = a.UpdatedAt,
-                Flights = _context.Flights.Where(i => i.Id == a.Id).Select(fl => new FlightsForAirlineVM()
+                CreatedAt = fd.CreatedAt,
+                ArrivingGate = fd.ArrivingGate,
+                DepartingGate = fd.DepartingGate,
+                UpdatedAt = fd.UpdatedAt,
+                DepartingAirport = _context.Airports.Where(a => a.Id == fd.DepartureAirportId).Select(da => new AirportVM()
                 {
-                    ArrivingGate = fl.ArrivingGate,
-                    CreatedAt = fl.CreatedAt,
-                    DepartingGate = fl.DepartingGate,
-                    UpdatedAt = fl.UpdatedAt,
-                    ArrivingAirport = _context.Airports.Where(ap => ap.Id == fl.Id).FirstOrDefault(),
-                    DepartureAirport = _context.Airports.Where(ap => ap.Id == fl.Id).FirstOrDefault(),
-                    FlightManifests = _context.FlightManifests.Where(i => i.Id == fl.Id).Select(fm => new FlightManifestForFlightsVM()
-                    {
-                        CreatedAt = fm.CreatedAt,
-                        UpdatedAt = fm.UpdatedAt
-                    }).ToList()
-                }).ToList(), 
+                    AirportName = da.AirportName,
+                    CreatedAt = da.CreatedAt,
+                    UpdatedAt = da.UpdatedAt,
+                    City = da.City,
+                    Country = da.Country,
+                    State = da.State
+                }).FirstOrDefault(),
+                ArrivingAirport = _context.Airports.Where(a => a.Id == fd.ArrivingAirportId).Select(aa => new AirportVM()
+                {
+                    AirportName = aa.AirportName,
+                    CreatedAt = aa.CreatedAt,
+                    UpdatedAt = aa.UpdatedAt,
+                    City = aa.City,
+                    Country = aa.Country,
+                    State = aa.State
+                }).FirstOrDefault(),
+                Airline = _context.Airlines.Where(al => al.Id == fd.AirlineId).Select(aln => new AirlineVM()
+                {
+                    AirlineCode = aln.AirlineCode,
+                    AirlineCountry = aln.AirlineCountry,
+                    AirlineName = aln.AirlineName,
+                    CreatedAt = aln.CreatedAt,
+                    UpdatedAt = aln.UpdatedAt
+                }).FirstOrDefault(),
+                FlightManifests = _context.FlightManifests.Where(fm => fm.FlightId == fd.Id).Select(fmn => new FlightManifestForFlightsVM()
+                {
+                    CreatedAt = fmn.CreatedAt,
+                    UpdatedAt = fmn.UpdatedAt,
+                    Booking = _context.Bookings.FirstOrDefault(b => b.Id == fmn.BookingId)
+                }).ToList(),
             }).FirstOrDefaultAsync();
-            return airline!;
+            return flightWithDetails!;
         }
 
-        public async Task<Airline> GetAirLineById(int id)
+        public async Task<Flights> UpdateFlightById(int id, FlightsVM flightsVM)
         {
-            return await _context.Airlines.FirstOrDefaultAsync(a=> a.Id == id);
-        }
-
-        public async Task<List<Airline>> GetAllAirlines() => await _context.Airlines.ToListAsync();
-
-        public async Task<Airline> UpdateAirlineById(int id, AirlineVM airlineVM)
-        {
-            var isAirlineExist = await _context.Airlines.FirstOrDefaultAsync(a => a.Id == id);
-            if (isAirlineExist != null)
+            var isFlightExist = await _context.Flights.FirstOrDefaultAsync(f => f.Id == id);
+            if (isFlightExist != null)
             {
-                isAirlineExist.AirlineCode = airlineVM.AirlineCode;
-                isAirlineExist.AirlineCountry = airlineVM.AirlineCountry;
-                isAirlineExist.AirlineName = airlineVM.AirlineName;
-                isAirlineExist.UpdatedAt = airlineVM.UpdatedAt;
+                isFlightExist.AirlineId = flightsVM.AirlineId;
+                isFlightExist.ArrivingAirportId = flightsVM.ArrivingAirportId;
+                isFlightExist.DepartureAirportId = flightsVM.DepartingAirportId;
+                isFlightExist.DepartingGate = flightsVM.DepartingGate;
+                isFlightExist.ArrivingGate = flightsVM.ArrivingGate;
+                isFlightExist.UpdatedAt = DateTime.Now;
                 await _context.SaveChangesAsync();
             }
-            return isAirlineExist!;
+            return isFlightExist!;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace AirportManagement.API.Models
 
         public int AirlineId { get; set; }
 
-		public ICollection<FlightManifest>? FlightManifests { get; set; }
+		public List<int>? FlightManifests { get; set; }
 	}
 
     public class FlightsForAirlineVM
@@ -62,11 +62,11 @@ namespace AirportManagement.API.Models
 
         public DateTime UpdatedAt { get; set; }
 
-        public Airport ArrivingAirport { get; set; }
+        public AirportVM? ArrivingAirport { get; set; }
 
-        public Airport DepartingAirport { get; set; }
+        public AirportVM? DepartingAirport { get; set; }
 
-        public Airline Airline { get; set; }
+        public AirlineVM? Airline { get; set; }
 
         public ICollection<FlightManifestForFlightsVM>? FlightManifests { get; set; }
     }

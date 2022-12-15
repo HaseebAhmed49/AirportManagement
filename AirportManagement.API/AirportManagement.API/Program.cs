@@ -17,6 +17,7 @@ builder.Services.AddScoped<IAirLineRepository,AirlineRepository>();
 builder.Services.AddScoped<IAirportRepository, AirportRepository>();
 builder.Services.AddScoped<IBaggageRepository, BaggageRepository>();
 builder.Services.AddScoped<IBaggageCheckRepository, BaggageCheckRepository>();
+builder.Services.AddScoped<IFlightsRepository, FlightsRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
