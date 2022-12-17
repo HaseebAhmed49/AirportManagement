@@ -25,14 +25,9 @@ namespace AirportManagement.API.Data.Services
                 DepartingGate = flightsVM.DepartingGate,
                 UpdatedAt = DateTime.Now,
             };
-            foreach (var item in flightsVM.FlightManifests)
-            {
-                var isFound = await _context.FlightManifests.FirstOrDefaultAsync(fm => fm.Id == item);
-                flight.FlightManifests.Add(isFound);
-            }
             await _context.Flights.AddAsync(flight);
             await _context.SaveChangesAsync();
-            return flight; 
+            return flight;
         }
 
         public async Task<Flights> DeleteFlightById(int id)

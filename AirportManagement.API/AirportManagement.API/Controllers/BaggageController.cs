@@ -40,10 +40,17 @@ namespace AirportManagement.API.Controllers
         [HttpGet("Get-All-Baggages")]
         public async Task<IActionResult> GetAllBaggages()
         {
-            var baggages = await _baggageRepository.GetAllBaggages();
-            if (baggages != null)
-                return Ok(baggages);
-            return NotFound("No Baggages Data Found");
+            try
+            {
+                var baggages = await _baggageRepository.GetAllBaggages();
+                if (baggages != null)
+                    return Ok(baggages);
+                return NotFound("No Baggages Data Found");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("Get-Baggage-By-Id/{id}")]

@@ -23,10 +23,17 @@ namespace AirportManagement.API.Controllers
         [HttpGet("Get-All-Airlines")]
         public async Task<IActionResult> GetAllAirlines()
         {
-            var airlines = await _airlineRepository.GetAllAirlines();
-            if (airlines != null)
-                return Ok(airlines);
-            return NotFound();
+            try
+            {
+                var airlines = await _airlineRepository.GetAllAirlines();
+                if (airlines != null)
+                    return Ok(airlines);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("Get-Airline-By-Id/{id}")]

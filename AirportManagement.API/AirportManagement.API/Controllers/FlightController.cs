@@ -40,10 +40,17 @@ namespace AirportManagement.API.Controllers
         [HttpGet("Get-All-Flights")]
         public async Task<IActionResult> GetAllFlights()
         {
-            var flights = await _flightRepository.GetAllFlights();
-            if (flights != null)
-                return Ok(flights);
-            return NotFound("No Flights Data Found");
+            try
+            {
+                var flights = await _flightRepository.GetAllFlights();
+                if (flights != null)
+                    return Ok(flights);
+                return NotFound("No Flights Data Found");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("Get-Flight-By-Id/{id}")]

@@ -6,17 +6,19 @@
       <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Flights/FlightsRepository.cs" relfile="AirportManagement.API/Data/Services/Flights/FlightsRepository.cs" line="17" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Services/Flights/FlightsRepository.cs">
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Models/Flights.cs">
     <Files>
-      <File FileName="AirportManagement.API/Data/Services/Flights/FlightsRepository.cs" Line="33" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/AirportVM.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/AirlineVM.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/FlightsVM.cs" Line="20" Column="15" />
-      <File FileName="AirportManagement.API/Data/Models/FlightManifest.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/FlightManifestVM.cs" Line="15" Column="44" />
-      <File FileName="AirportManagement.API/Data/ViewModels/BookingVM.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Controllers/FlightController.cs" Line="75" Column="1" />
-      <File FileName="AirportManagement.API/Program.cs" Line="20" Column="66" />
+      <File FileName="AirportManagement.API/Data/Services/Flights/FlightsRepository.cs" Line="31" Column="1" />
+      <File FileName="AirportManagement.API/Data/ViewModels/AirportVM.cs" />
+      <File FileName="AirportManagement.API/Data/ViewModels/AirlineVM.cs" />
+      <File FileName="AirportManagement.API/Data/ViewModels/FlightsVM.cs" />
+      <File FileName="AirportManagement.API/Data/Models/FlightManifest.cs" />
+      <File FileName="AirportManagement.API/Data/ViewModels/FlightManifestVM.cs" />
+      <File FileName="AirportManagement.API/Data/ViewModels/BookingVM.cs" />
+      <File FileName="AirportManagement.API/Controllers/FlightController.cs" Line="78" Column="1" />
+      <File FileName="AirportManagement.API/Program.cs" />
+      <File FileName="AirportManagement.API/Data/Models/Flights.cs" Line="5" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -32,14 +34,12 @@
                 </Node>
                 <Node name="ViewModels" expanded="True" />
               </Node>
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

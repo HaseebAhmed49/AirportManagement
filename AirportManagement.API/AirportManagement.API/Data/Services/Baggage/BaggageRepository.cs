@@ -20,7 +20,7 @@ namespace AirportManagement.API.Data.Services
                 CreatedDate = DateTime.Now,
                 UpdatedDate = DateTime.Now,
                 WeightInKG = baggageVM.WeightInKG,
-                BookingId = baggageVM.Booking!.Id
+                BookingId = baggageVM.BookingId
             };
             await _context.Baggages.AddAsync(baggage);
             await _context.SaveChangesAsync();
@@ -112,7 +112,7 @@ namespace AirportManagement.API.Data.Services
             if (isBaggageExist != null)
             {
                 isBaggageExist.UpdatedDate = baggageVM.UpdatedDate;
-                isBaggageExist.BookingId = baggageVM.Booking!.Id;
+                isBaggageExist.BookingId = baggageVM.BookingId;
                 isBaggageExist.WeightInKG = baggageVM.WeightInKG;
                 await _context.SaveChangesAsync();
             }
