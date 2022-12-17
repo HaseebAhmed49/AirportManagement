@@ -37,4 +37,15 @@ namespace AirportManagement.API.Models
         public DateTime UpdatedAt { get; set; }
     }
 
+    public class BaggageCheckForBookingVM
+    {
+        public string CheckResult { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+
+        public DateTime UpdatedAt { get; set; }
+
+        public Passangers? Passangers { get; set; }
+    }
+
 }

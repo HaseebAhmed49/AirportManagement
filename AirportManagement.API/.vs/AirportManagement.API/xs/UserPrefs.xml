@@ -1,25 +1,14 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="106" column="1" />
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Flights/FlightsRepository.cs" relfile="AirportManagement.API/Data/Services/Flights/FlightsRepository.cs" line="17" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Models/Flights.cs">
-    <Files>
-      <File FileName="AirportManagement.API/Data/Services/Flights/FlightsRepository.cs" Line="31" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/AirportVM.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/AirlineVM.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/FlightsVM.cs" />
-      <File FileName="AirportManagement.API/Data/Models/FlightManifest.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/FlightManifestVM.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/BookingVM.cs" />
-      <File FileName="AirportManagement.API/Controllers/FlightController.cs" Line="78" Column="1" />
-      <File FileName="AirportManagement.API/Program.cs" />
-      <File FileName="AirportManagement.API/Data/Models/Flights.cs" Line="5" Column="2" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -29,6 +18,7 @@
               <Node name="Data" expanded="True">
                 <Node name="Models" expanded="True" />
                 <Node name="Services" expanded="True">
+                  <Node name="Baggage" expanded="True" />
                   <Node name="BaggageCheck" expanded="True" />
                   <Node name="Flights" expanded="True" />
                 </Node>
@@ -40,6 +30,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
