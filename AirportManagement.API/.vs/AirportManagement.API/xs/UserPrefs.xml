@@ -1,14 +1,22 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
   <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Models/SecurityCheck.cs">
+    <Files>
+      <File FileName="AirportManagement.API/Data/Models/BoardingPass.cs" Line="15" Column="1" />
+      <File FileName="AirportManagement.API/Data/Services/BoardingPass/IBoardingPassRepository.cs" Line="19" Column="1" />
+      <File FileName="AirportManagement.API/Data/ViewModels/BoardingPassVM.cs" Line="32" Column="33" />
+      <File FileName="AirportManagement.API/Data/Services/BoardingPass/BoardingPassRepository.cs" Line="10" Column="1" />
+      <File FileName="AirportManagement.API/Data/ViewModels/BookingVM.cs" Line="94" Column="39" />
+      <File FileName="AirportManagement.API/Data/ViewModels/BaggageCheckVM.cs" Line="42" Column="1" />
+      <File FileName="AirportManagement.API/Data/ViewModels/FlightManifestVM.cs" Line="31" Column="18" />
+      <File FileName="AirportManagement.API/Data/ViewModels/BaggageVM.cs" Line="15" Column="18" />
+      <File FileName="AirportManagement.API/Data/Services/BaggageCheck/BaggageCheckRepository.cs" Line="1" Column="1" />
+      <File FileName="AirportManagement.API/Controllers/BoardingPassController.cs" Line="111" Column="33" />
+      <File FileName="AirportManagement.API/Program.cs" Line="21" Column="76" />
+      <File FileName="AirportManagement.API/Data/Models/Booking.cs" Line="1" Column="1" />
+      <File FileName="AirportManagement.API/Data/Models/SecurityCheck.cs" Line="20" Column="2" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -18,9 +26,8 @@
               <Node name="Data" expanded="True">
                 <Node name="Models" expanded="True" />
                 <Node name="Services" expanded="True">
-                  <Node name="Baggage" expanded="True" />
                   <Node name="BaggageCheck" expanded="True" />
-                  <Node name="Flights" expanded="True" />
+                  <Node name="BoardingPass" expanded="True" />
                 </Node>
                 <Node name="ViewModels" expanded="True" />
               </Node>
@@ -30,5 +37,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
