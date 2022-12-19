@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">Airport Management Application</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggle-icon"></span>
+    </button>
+</nav>
+<div>
+        <form class="form-horizontal">
+            <h1 style="text-align: center;">Passangers</h1>
+            <div >
+                  <div>
+                    <div class="alert-success alert" style="text-align: center;"><b>Passangers List</b></div>
+                    <div class="table-responsive" style="text-align: center;">
+                        <table class="table table-hover table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Passanger Id</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last Name</th>
+                                    <th scope="col">Passport Number</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let passanger of passangersList | async; index as i">
+                                    <th scope="row">{{ i+1 }}</th>
+                                    <td>{{ passanger.projectTaskID }}</td>
+                                    <td>{{ prjtask.assignedTo }}</td>
+                                    <td>{{ prjtask.taskStartDate }}</td>
+                                    <td>{{ prjtask.taskEndDate }}</td>
+                                    <td>{{ prjtask.taskCompletion }}</td>
+                                    <td>{{ prjtask.employeeID }}</td>
+                                    <td>{{ prjtask.userStoryID }}</td>
+                                    <td><button class="btn btn-primary" type="button" matToolTip="Click Edit Button" (click)="ProjectTaskDetailsToEdit(prjtask.projectTaskID)">Edit</button>
+                                        |
+                                        <button class="btn btn-danger" type="button" matToolTip="Click Delete Button" (click)="DeleteProjectTask(prjtask.projectTaskID)">Delete</button>                                
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </form>    
+    <div col-md-3>
+    </div>
+</div>
