@@ -20,7 +20,7 @@ export class PassangerService {
 
   // https://localhost:7139/api/Passangers/Get-All-Passangers
 
-  getPassangers():Observable<PaginatedResults<Passangers[]>>{
+  getPassangers():Observable<Passangers[]>{
     return this.http.get<Passangers[]>(this.baseUrl+'Passangers/Get-All-Passangers',httpOptions);
   }
 

@@ -23,17 +23,13 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="let passanger of passangersList | async; index as i">
-                                    <th scope="row">{{ i+1 }}</th>
-                                    <td>{{ passanger.projectTaskID }}</td>
-                                    <td>{{ prjtask.assignedTo }}</td>
-                                    <td>{{ prjtask.taskStartDate }}</td>
-                                    <td>{{ prjtask.taskEndDate }}</td>
-                                    <td>{{ prjtask.taskCompletion }}</td>
-                                    <td>{{ prjtask.employeeID }}</td>
-                                    <td>{{ prjtask.userStoryID }}</td>
-                                    <td><button class="btn btn-primary" type="button" matToolTip="Click Edit Button" (click)="ProjectTaskDetailsToEdit(prjtask.projectTaskID)">Edit</button>
+                                    <td>{{ passanger.id }}</td>
+                                    <td>{{ passanger.firstName }}</td>
+                                    <td>{{ passanger.lastName }}</td>
+                                    <td>{{ passanger.passportNumber }}</td>
+                                    <td><button class="btn btn-primary" type="button" matToolTip="Click Edit Button">Edit</button>
                                         |
-                                        <button class="btn btn-danger" type="button" matToolTip="Click Delete Button" (click)="DeleteProjectTask(prjtask.projectTaskID)">Delete</button>                                
+                                        <button class="btn btn-danger" type="button" matToolTip="Click Delete Button">Delete</button>                                
                                     </td>
                                 </tr>
                             </tbody>

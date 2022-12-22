@@ -3,13 +3,13 @@ import { NoFlyList } from "./NoFlyList";
 import { SecurityCheck } from "./SecurityCheck";
 
 export interface Passangers {
-    Id: number;
-    FirstName: string;
-    LastName: string;
+    id: number;
+    firstName: string;
+    lastName: string;
     DateOfBirth: Date;
     CountryOfCitizenship: string;
     CountryOfResidence: string;
-    PassportNumber: string;
+    passportNumber: string;
     CreatedAt: Date;
     UpdatedAt: Date;
     SecurityChecks: SecurityCheck[];
