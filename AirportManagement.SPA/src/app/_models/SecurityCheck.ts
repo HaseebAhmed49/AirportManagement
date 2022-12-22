@@ -9,3 +9,11 @@ export interface SecurityCheck {
     PassangerId: number;
     Passangers: Passangers;
 }
+
+export interface SecurityCheckForPassanger {
+    checkResult: string;
+    comments: string;
+    createdAt: Date;
+    updatedAt: Date;
+}
+

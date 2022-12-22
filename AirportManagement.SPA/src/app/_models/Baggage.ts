@@ -8,3 +8,9 @@ export interface Baggage {
     BookingId: number;
     Booking: Booking;
 }
+
+export interface BaggageForPassanger {
+    weightInKG: number;
+    createdDate: Date;
+    updatedDate: Date;
+}

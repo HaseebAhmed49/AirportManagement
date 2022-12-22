@@ -1,7 +1,7 @@
-import { Baggage } from "./Baggage";
-import { BaggageCheck } from "./BaggageCheck";
-import { BoardingPass } from "./BoardingPass";
-import { FlightManifest } from "./FlightManifest";
+import { Baggage, BaggageForPassanger } from "./Baggage";
+import { BaggageCheck, BaggageCheckForPassanger } from "./BaggageCheck";
+import { BoardingPass, BoardingPassForPassanger } from "./BoardingPass";
+import { FlightManifest, FlightManifestForPassanger } from "./FlightManifest";
 import { Passangers } from "./Passangers";
 
 export interface Booking {
@@ -16,4 +16,16 @@ export interface Booking {
     Baggages: Baggage[]
     PassangerId: number;
     Passangers: Passangers;
+}
+
+
+export interface BookingForPassanger{
+    status: string;
+    bookingPlatform: string;
+    createdAt: Date;
+    updatedAt: Date;
+    baggageChecks: BaggageCheckForPassanger[];
+    flightManifests: FlightManifestForPassanger[]
+    boardingPasses: BoardingPassForPassanger[]
+    baggages: BaggageForPassanger[]
 }

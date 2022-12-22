@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U7AU0/xYzxmQ7au8WzeFSRgIdo2DWVcuV46/a7hPkCuw0Lz1ycs6YE0lwvx7ETdksyzLoA0t+UZj5K8SrjXwEw==",
+  "dgSpecHash": "HqAikxp6de857RvIDLyw9hdGC+bxCIelpeVmK4++svY0Kzq2+ZtQ5OhCBKJed3mNAtTNdi3Kz0HB2f0VmDAnEQ==",
   "success": true,
-  "projectFilePath": "/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/AirportManagement.API.csproj",
+  "projectFilePath": "/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/AirportManagement.API.csproj",
   "expectedPackageFiles": [
     "/Users/haseebahmed/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
     "/Users/haseebahmed/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

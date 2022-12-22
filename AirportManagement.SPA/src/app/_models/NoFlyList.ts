@@ -10,3 +10,11 @@ export interface NoFlyList {
     PassangerId: number;
     Passangers: Passangers;
 }
+
+export interface NoFlyListForPassanger {
+        activeFrom: Date;
+        activeTo: Date;
+        noFlyReason: string,
+        createdAt: Date,
+        updatedAt: Date
+}

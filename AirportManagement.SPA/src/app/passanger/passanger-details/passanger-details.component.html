@@ -1,0 +1,30 @@
+<div class="container">
+    <div>{{Passanger.firstName}}</div>
+    <div>{{Passanger.lastName}}</div>
+    <div>{{Passanger.dateOfBirth}}</div>
+    <div>{{Passanger.passportNumber}}</div>
+    <div>{{Passanger.createdAt}}</div>
+    <div>{{Passanger.updatedAt}}</div>
+    <div>{{Passanger.countryOfCitizenship}}</div>
+    <div>{{Passanger.countryOfResidence}}</div>
+    <div class="table-responsive" style="text-align: center;">
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Check Result</th>
+                    <th scope="col">Comments</th>
+                    <th scope="col">Created At</th>
+                    <th scope="col">Updated At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let securityCheck of Passanger.SecurityChecks | async; index as i">
+                    <td>{{ securityCheck.checkResult }}</td>
+                    <td>{{ securityCheck.comments }}</td>
+                    <td>{{ securityCheck.createdAt }}</td>
+                    <td>{{ securityCheck.updatedAt }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

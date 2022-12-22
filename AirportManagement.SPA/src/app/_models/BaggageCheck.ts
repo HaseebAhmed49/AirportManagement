@@ -11,3 +11,9 @@ export interface BaggageCheck {
     PassangerId: number;
     Passangers: Passangers;
 }
+
+export interface BaggageCheckForPassanger{
+    checkResult: string;
+    createdAt: Date;
+    updatedAt: Date;
+}

@@ -6,19 +6,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PassangerComponent } from './passanger/passanger.component';
 import { AlertifyService } from './_services/alertify.service';
+import { PassangerDetailsComponent } from './passanger/passanger-details/passanger-details.component';
+import { PassangerDetailResolver } from './_resolvers/passanger-detail.resolver';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PassangerComponent
+    PassangerComponent,
+    PassangerDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    AlertifyService
+    AlertifyService,
+    PassangerDetailResolver
   ],
   bootstrap: [AppComponent]
 })

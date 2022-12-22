@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Passangers } from '../_models/Passangers';
+import { PassangerWithDetails } from '../_models/PassangerWithDetails';
 
 const httpOptions = {
   headers:new HttpHeaders({
@@ -24,8 +25,8 @@ export class PassangerService {
     return this.http.get<Passangers[]>(this.baseUrl+'Passangers/Get-All-Passangers',httpOptions);
   }
 
-  getPassangerWithDetailsById(id: string):Observable<Passangers>{
-    return this.http.get<Passangers>(this.baseUrl+'Passangers/Get-Passanger-With-Details-By-Id/'+id,httpOptions);    
+  getPassangerWithDetailsById(id: string):Observable<PassangerWithDetails>{
+    return this.http.get<PassangerWithDetails>(this.baseUrl+'Passangers/Get-Passanger-With-Details-By-Id/'+id,httpOptions);    
   }
 
   updatePassanger(id:string, Passanger:Passangers){

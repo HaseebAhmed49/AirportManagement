@@ -29,7 +29,7 @@
                                     <td>{{ passanger.passportNumber }}</td>
                                     <td><button class="btn btn-primary" type="button" matToolTip="Click Edit Button">Edit</button>
                                         |
-                                        <button class="btn btn-danger" type="button" matToolTip="Click Delete Button">Delete</button>                                
+                                        <button class="btn btn-primary" [routerLink]="['/passanger/',passanger?.id]"><i class="fa fa-info"></i></button>
                                     </td>
                                 </tr>
                             </tbody>

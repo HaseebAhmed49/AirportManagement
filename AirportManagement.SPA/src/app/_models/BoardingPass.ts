@@ -8,3 +8,9 @@ export interface BoardingPass {
     BookingId: number;
     Booking: Booking;
 }
+
+export interface BoardingPassForPassanger {
+    qrCode: string,
+    createdAt: Date;
+    updatedAt: Date;
+}

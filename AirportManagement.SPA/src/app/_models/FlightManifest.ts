@@ -10,3 +10,8 @@ export interface FlightManifest {
     BookingId: number;
     Booking: Booking;
 }
+
+export interface FlightManifestForPassanger{
+    createdAt: Date;
+    updatedAt: Date;
+}

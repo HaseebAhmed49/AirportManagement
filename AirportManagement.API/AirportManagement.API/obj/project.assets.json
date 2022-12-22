@@ -4424,11 +4424,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/AirportManagement.API.csproj",
+      "projectUniqueName": "/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/AirportManagement.API.csproj",
       "projectName": "AirportManagement.API",
-      "projectPath": "/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/AirportManagement.API.csproj",
+      "projectPath": "/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/AirportManagement.API.csproj",
       "packagesPath": "/Users/haseebahmed/.nuget/packages/",
-      "outputPath": "/Users/haseebahmed/Desktop/dotNetPractice/AirportManagement/AirportManagement.API/AirportManagement.API/obj/",
+      "outputPath": "/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/haseebahmed/.nuget/NuGet/NuGet.Config"
