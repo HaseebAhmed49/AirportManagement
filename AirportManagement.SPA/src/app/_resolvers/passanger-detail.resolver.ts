@@ -12,8 +12,10 @@ export class PassangerDetailResolver implements Resolve<PassangerWithDetails>{
 
         resolve(route: ActivatedRouteSnapshot): Observable<PassangerWithDetails>{
             console.log('id');
+            console.log('testing')
             return this.passangerService.getPassangerWithDetailsById(route.params['id']).pipe(
                 catchError(error => {
+                    console.log(error);
                     this.alertify.error('Problem retreiving Data');
                     this.router.navigate(['/passanger']);
                     return of();

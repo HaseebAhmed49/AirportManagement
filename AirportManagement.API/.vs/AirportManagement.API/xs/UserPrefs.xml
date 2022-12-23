@@ -3,13 +3,13 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/haseebahmed/Desktop/ dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
-      <Breakpoint file="/Users/haseebahmed/Desktop/ dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Controllers/PassangerController.cs">
     <Files>
       <File FileName="AirportManagement.API/Data/Models/BoardingPass.cs" />
       <File FileName="AirportManagement.API/Data/Services/BoardingPass/IBoardingPassRepository.cs" />
@@ -32,9 +32,10 @@
       <File FileName="AirportManagement.API/Data/Models/Flights.cs" />
       <File FileName="AirportManagement.API/Data/Models/NoFlyList.cs" />
       <File FileName="AirportManagement.API/Data/Models/Passangers.cs" />
-      <File FileName="AirportManagement.API/appsettings.json" Line="11" Column="66" />
+      <File FileName="AirportManagement.API/appsettings.json" Line="3" Column="22" />
       <File FileName="AirportManagement.API/Properties/launchSettings.json" />
-      <File FileName="AirportManagement.API/Controllers/PassangerController.cs" Line="49" Column="14" />
+      <File FileName="AirportManagement.API/Controllers/PassangerController.cs" Line="37" Column="14" />
+      <File FileName="AirportManagement.API/Data/ViewModels/PassangersVM.cs" Line="31" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -51,7 +52,6 @@
                 <Node name="ViewModels" expanded="True" />
               </Node>
               <Node name="Properties" expanded="True" />
-              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>

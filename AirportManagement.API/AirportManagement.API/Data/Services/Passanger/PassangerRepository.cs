@@ -80,10 +80,10 @@ namespace AirportManagement.API.Data.Services
                 CountryOfResidence = pn.CountryOfResidence,
                 CreatedAt = pn.CreatedAt,
                 UpdatedAt = pn.UpdatedAt,
-                Bookings = _context.Bookings.Where(b => b.Id == pn.Id).Select(bn => new BookingForPassangerVM()
+                Bookings = _context.Bookings.Where(b => b.PassangerId == pn.Id).Select(bn => new BookingForPassangerVM()
                 {
                     BookingPlatform = bn.BookingPlatform,
-                    CreatedAt = bn.CreatedAt,
+                    CreatedAt = bn.CreatedAt.Date,
                     UpdatedAt = bn.UpdatedAt,
                     Status = bn.Status,
                     BaggageChecks = _context.BaggageChecks.Where(bgc => bgc.Id == bn.Id).Select(bgcn => new BaggageCheckForPassangerVM()
@@ -110,14 +110,14 @@ namespace AirportManagement.API.Data.Services
                         UpdatedAt = fmn.UpdatedAt,
                     }).ToList(),
                 }).ToList(),
-                SecurityChecks = _context.SecurityChecks.Where(sc => sc.Id == pn.Id).Select(scn => new SecurityCheckForPassangersVM()
+                SecurityChecks = _context.SecurityChecks.Where(sc => sc.PassangerId == pn.Id).Select(scn => new SecurityCheckForPassangersVM()
                 {
                     CreatedAt = scn.CreatedAt,
                     UpdatedAt = scn.UpdatedAt,
                     CheckResult = scn.CheckResult,
                     Comments = scn.Comments
                 }).ToList(),
-                NoFlyLists = _context.NoFlyLists.Where(nfl => nfl.Id == pn.Id).Select(nfln => new NoFlyListForPassangerVM()
+                NoFlyLists = _context.NoFlyLists.Where(nfl => nfl.PassangerId == pn.Id).Select(nfln => new NoFlyListForPassangerVM()
                 {
                     CreatedAt = nfln.CreatedAt,
                     UpdatedAt = nfln.UpdatedAt,

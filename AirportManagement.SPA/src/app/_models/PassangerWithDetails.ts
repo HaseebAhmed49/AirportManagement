@@ -12,7 +12,7 @@ export interface PassangerWithDetails {
     passportNumber: string;
     createdAt: Date;
     updatedAt: Date;
-    SecurityChecks: Observable<SecurityCheckForPassanger[]>;
-    Bookings: BookingForPassanger[];
-    NoFlyLists: NoFlyListForPassanger[];
+    securityChecks: SecurityCheckForPassanger[];
+    bookings: BookingForPassanger[];
+    noFlyLists: NoFlyListForPassanger[];
 }
