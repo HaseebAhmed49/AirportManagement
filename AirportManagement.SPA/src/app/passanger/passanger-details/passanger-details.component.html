@@ -1,33 +1,67 @@
 <div class="container">
-    <div>{{Passanger.firstName}}</div>
-    <div>{{Passanger.lastName}}</div>
-    <div>{{Passanger.dateOfBirth}}</div>
-    <div>{{Passanger.passportNumber}}</div>
-    <div>{{Passanger.createdAt}}</div>
-    <div>{{Passanger.updatedAt}}</div>
-    <div>{{Passanger.countryOfCitizenship}}</div>
-    <div>{{Passanger.countryOfResidence}}</div>
-    <h4 class="text-center">Security Check</h4>
+    <h4 class="text-center">Passanger Details</h4>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered table-striped">
             <thead>
                 <tr>
-                    <th scope="col">Check Result</th>
-                    <th scope="col">Comments</th>
-                    <th scope="col">Created At</th>
-                    <th scope="col">Updated At</th>
+                    <th scope="col"><h4>First Name</h4></th>
+                    <th scope="col"><h4>Last Name</h4></th>
+                    <th scope="col"><h4>Date Of Birth</h4></th>
+                    <th scope="col"><h4>Passport Number</h4></th>
+                    <th scope="col"><h4>Created At</h4></th>
+                    <th scope="col"><h4>Updated At</h4></th>
+                    <th scope="col"><h4>Country Of Citizenship</h4></th>
+                    <th scope="col"><h4>Country Of Residence</h4></th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let securityCheck of Passanger.securityChecks">
-                    <td>{{ securityCheck.checkResult }}</td>
-                    <td>{{ securityCheck.comments }}</td>
-                    <td>{{ securityCheck.createdAt }}</td>
-                    <td>{{ securityCheck.updatedAt }}</td>
+                <tr>
+                    <td>{{Passanger.firstName}}</td>
+                    <td>{{Passanger.lastName}}</td>
+                    <td>{{Passanger.dateOfBirth}}</td>
+                    <td>{{Passanger.passportNumber}}</td>
+                    <td>{{Passanger.createdAt}}</td>
+                    <td>{{Passanger.updatedAt}}</td>
+                    <td>{{Passanger.countryOfCitizenship}}</td>
+                    <td>{{Passanger.countryOfResidence}}</td>                
                 </tr>
             </tbody>
         </table>
     </div>
+    <hr>
+
+
+    <div *ngIf="Passanger.securityChecks.length>0">
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              Show Security Checks
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+                <h4 class="text-center">Security Check</h4>
+                <div class="table-responsive" style="text-align: center;">
+                    <table class="table table-hover table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Check Result</th>
+                                <th scope="col">Comments</th>
+                                <th scope="col">Created At</th>
+                                <th scope="col">Updated At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let securityCheck of Passanger.securityChecks">
+                                <td>{{ securityCheck.checkResult }}</td>
+                                <td>{{ securityCheck.comments }}</td>
+                                <td>{{ securityCheck.createdAt }}</td>
+                                <td>{{ securityCheck.updatedAt }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+          </div>  
+    </div>
+<hr>
     <h4 class="text-center">Booking</h4>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered table-striped">

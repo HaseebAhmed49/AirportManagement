@@ -86,25 +86,25 @@ namespace AirportManagement.API.Data.Services
                     CreatedAt = bn.CreatedAt.Date,
                     UpdatedAt = bn.UpdatedAt,
                     Status = bn.Status,
-                    BaggageChecks = _context.BaggageChecks.Where(bgc => bgc.Id == bn.Id).Select(bgcn => new BaggageCheckForPassangerVM()
+                    BaggageChecks = _context.BaggageChecks.Where(bgc => bgc.BookingId == bn.Id).Select(bgcn => new BaggageCheckForPassangerVM()
                     {
                         CheckResult = bgcn.CheckResult,
                         CreatedAt = bgcn.CreatedAt,
                         UpdatedAt = bgcn.UpdatedAt
                     }).ToList(),
-                    Baggages = _context.Baggages.Where(bg => bg.Id == bn.Id).Select(bgn => new BaggageForPassangerVM()
+                    Baggages = _context.Baggages.Where(bg => bg.BookingId == bn.Id).Select(bgn => new BaggageForPassangerVM()
                     {
                         CreatedDate = bgn.CreatedDate,
                         UpdatedDate = bgn.UpdatedDate,
                         WeightInKG = bgn.WeightInKG
                     }).ToList(),
-                    BoardingPasses = _context.BoardingPasses.Where(bp => bp.Id == bn.Id).Select(bpn => new BoardingPassForPassangerVM()
+                    BoardingPasses = _context.BoardingPasses.Where(bp => bp.BookingId == bn.Id).Select(bpn => new BoardingPassForPassangerVM()
                     {
                         CreatedAt = bpn.CreatedAt,
                         QRCode = bpn.QRCode,
                         UpdatedAt = bpn.UpdatedAt
                     }).ToList(),
-                    FlightManifests = _context.FlightManifests.Where(fm => fm.Id == bn.Id).Select(fmn => new FlightManifestForPassangersVM()
+                    FlightManifests = _context.FlightManifests.Where(fm => fm.BookingId == bn.Id).Select(fmn => new FlightManifestForPassangersVM()
                     {
                         CreatedAt = fmn.CreatedAt,
                         UpdatedAt = fmn.UpdatedAt,
@@ -130,4 +130,3 @@ namespace AirportManagement.API.Data.Services
         }
     }
 }
-
