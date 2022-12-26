@@ -31,12 +31,43 @@
     <hr>
 
 
-    <div *ngIf="Passanger.securityChecks.length>0">
-        <p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <div class="row">
+        <p class="col text-center">
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               Show Security Checks
             </button>
           </p>
+          <p class="col text-center">
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBookings" aria-expanded="false" aria-controls="collapseBookings">
+              Show Bookings
+            </button>
+          </p>
+              <p class="col text-center">
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBaggage" aria-expanded="false" aria-controls="collapseBaggage">
+              Show Baggages
+            </button>
+          </p>
+    
+          <p class="col text-center">
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBaggageCheck" aria-expanded="false" aria-controls="collapseBaggageCheck">
+              Show Baggage Check
+            </button>
+          </p>
+    
+          <p class="col text-center">
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBoardingPass" aria-expanded="false" aria-controls="collapseBoardingPass">
+              Show Boarding Pass
+            </button>
+          </p>
+    
+          <p class="col text-center">
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFlightManifest" aria-expanded="false" aria-controls="collapseFlightManifest">
+              Show FlightManifests
+            </button>
+          </p>
+    </div>
+
+    <div class="text-center" *ngIf="Passanger.securityChecks.length>0">
           <div class="collapse" id="collapseExample">
                 <h4 class="text-center">Security Check</h4>
                 <div class="table-responsive" style="text-align: center;">
@@ -61,89 +92,111 @@
                 </div>
           </div>  
     </div>
-<hr>
-    <h4 class="text-center">Booking</h4>
-    <div class="table-responsive" style="text-align: center;">
-        <table class="table table-hover table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Booking Platform</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Created At</th>
-                    <th scope="col">Updated At</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let booking of Passanger.bookings">
-                    <td>{{ booking.bookingPlatform }}</td>
-                    <td>{{ booking.status }}</td>
-                    <td>{{ booking.createdAt }}</td>
-                    <td>{{ booking.updatedAt }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="text-center" *ngIf="Passanger.bookings.length>0">
+      <div class="collapse" id="collapseBookings">
+        <h4 class="text-center">Booking</h4>
+        <div class="table-responsive" style="text-align: center;">
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Booking Platform</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">Updated At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let booking of Passanger.bookings">
+                        <td>{{ booking.bookingPlatform }}</td>
+                        <td>{{ booking.status }}</td>
+                        <td>{{ booking.createdAt }}</td>
+                        <td>{{ booking.updatedAt }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+    </div>  
+</div>
 
-    <h4 class="text-center">Baggage</h4>
-    <div *ngFor="let booking of Passanger.bookings" class="table-responsive" style="text-align: center;">
-        <table class="table table-hover table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Check Result</th>
-                    <th scope="col">Created Date</th>
-                    <th scope="col">Updated Date</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let baggage of booking.baggages">
-                    <td>{{ baggage.weightInKG }}</td>
-                    <td>{{ baggage.createdDate }}</td>
-                    <td>{{ baggage.updatedDate }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="text-center" *ngIf="Passanger.bookings.length>0">
+      <div class="collapse" id="collapseBaggage">
+        <h4 class="text-center">Baggage</h4>
+        <div *ngFor="let booking of Passanger.bookings" class="table-responsive" style="text-align: center;">
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Check Result</th>
+                        <th scope="col">Created Date</th>
+                        <th scope="col">Updated Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let baggage of booking.baggages">
+                        <td>{{ baggage.weightInKG }}</td>
+                        <td>{{ baggage.createdDate }}</td>
+                        <td>{{ baggage.updatedDate }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>    
+    </div>  
+</div>
 
-    <h4 class="text-center">Baggage Checks</h4>
-    <div *ngFor="let booking of Passanger.bookings" class="table-responsive" style="text-align: center;">
-        <table class="table table-hover table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Check Result</th>
-                    <th scope="col">Created At</th>
-                    <th scope="col">Updated At</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let baggageChecks of booking.baggageChecks">
-                    <td>{{ baggageChecks.checkResult }}</td>
-                    <td>{{ baggageChecks.createdAt }}</td>
-                    <td>{{ baggageChecks.updatedAt }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="text-center" *ngIf="Passanger.bookings.length>0">
+      <div class="collapse" id="collapseBaggageCheck">
+        <h4 class="text-center">Baggage Checks</h4>
+        <div *ngFor="let booking of Passanger.bookings" class="table-responsive" style="text-align: center;">
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Check Result</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">Updated At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let baggageChecks of booking.baggageChecks">
+                        <td>{{ baggageChecks.checkResult }}</td>
+                        <td>{{ baggageChecks.createdAt }}</td>
+                        <td>{{ baggageChecks.updatedAt }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    </div>  
+</div>
 
-    <h4 class="text-center">Boarding Pass</h4>
-    <div *ngFor="let booking of Passanger.bookings" class="table-responsive" style="text-align: center;">
-        <table class="table table-hover table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">QR Code</th>
-                    <th scope="col">Created At</th>
-                    <th scope="col">Updated At</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let boardingPasses of booking.boardingPasses">
-                    <td>{{ boardingPasses.qrCode }}</td>
-                    <td>{{ boardingPasses.createdAt }}</td>
-                    <td>{{ boardingPasses.updatedAt }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="text-center" *ngIf="Passanger.bookings.length>0">
+      <div class="collapse" id="collapseBoardingPass">
+        <h4 class="text-center">Boarding Pass</h4>
+        <div *ngFor="let booking of Passanger.bookings" class="table-responsive" style="text-align: center;">
+            <table class="table table-hover table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">QR Code</th>
+                        <th scope="col">Created At</th>
+                        <th scope="col">Updated At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let boardingPasses of booking.boardingPasses">
+                        <td>{{ boardingPasses.qrCode }}</td>
+                        <td>{{ boardingPasses.createdAt }}</td>
+                        <td>{{ boardingPasses.updatedAt }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    
+    </div>  
+</div>
 
+
+<div class="text-center" *ngIf="Passanger.bookings.length>0">
+      <div class="collapse" id="collapseFlightManifest">
+       
     <h4 class="text-center">Flight Manifest</h4>
     <div *ngFor="let booking of Passanger.bookings" class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered table-striped">
@@ -160,6 +213,8 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-
+    </div>    
+    
+    </div>  
+</div>
 </div>
