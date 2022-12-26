@@ -1,36 +1,35 @@
 <div class="container">
-    <h4 class="text-center">Passanger Details</h4>
+    <h1 class="text-center">Passanger Details</h1>
     <div class="table-responsive" style="text-align: center;">
         <table class="table table-hover table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th scope="col"><h4>First Name</h4></th>
-                    <th scope="col"><h4>Last Name</h4></th>
-                    <th scope="col"><h4>Date Of Birth</h4></th>
-                    <th scope="col"><h4>Passport Number</h4></th>
-                    <th scope="col"><h4>Created At</h4></th>
-                    <th scope="col"><h4>Updated At</h4></th>
-                    <th scope="col"><h4>Country Of Citizenship</h4></th>
-                    <th scope="col"><h4>Country Of Residence</h4></th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
-                    <td>{{Passanger.firstName}}</td>
-                    <td>{{Passanger.lastName}}</td>
-                    <td>{{Passanger.dateOfBirth}}</td>
-                    <td>{{Passanger.passportNumber}}</td>
-                    <td>{{Passanger.createdAt}}</td>
-                    <td>{{Passanger.updatedAt}}</td>
-                    <td>{{Passanger.countryOfCitizenship}}</td>
-                    <td>{{Passanger.countryOfResidence}}</td>                
+                  <td><h4>First Name: </h4>{{Passanger.firstName}}</td>
                 </tr>
-            </tbody>
+                <tr>
+                    <td><h4>Last Name: </h4>{{Passanger.lastName}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Date of Birth: </h4>{{Passanger.dateOfBirth}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Passport Number: </h4>{{Passanger.passportNumber}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Country of Citizenship: </h4>{{Passanger.countryOfCitizenship}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Country of Residence: </h4>{{Passanger.countryOfResidence}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Created At: </h4>{{Passanger.createdAt}}</td>
+                </tr>
+                <tr>
+                    <td><h4>Updated At: </h4>{{Passanger.updatedAt}}</td>
+                </tr>
+              </tbody>
         </table>
     </div>
-    <hr>
-
-
     <div class="row">
         <p class="col text-center">
             <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
