@@ -52,7 +52,11 @@ namespace AirportManagement.API.Data.Services
             return await _context.Passangers.FirstOrDefaultAsync(p=> p.Id == id);
         }
 
-        public async Task<List<Passangers>> GetAllPassangers() => await _context.Passangers.ToListAsync();
+        public async Task<List<Passangers>> GetAllPassangers()
+        {
+            var passangers = await _context.Passangers.ToListAsync();
+            return passangers;
+        }
 
         public async Task<Passangers> UpdatePassangerById(int id, PassangersVM passangerVM)
         {
