@@ -1,11 +1,12 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 
 namespace AirportManagement.API.Data.Services
 {
 	public interface IPassangerRepository
     {
-        public Task<List<Passangers>> GetAllPassangers();
+        public Task<PagedList<Passangers>> GetAllPassangers(UserParams userParams);
 
         public Task<Passangers> GetPassangerById(int id);
 
