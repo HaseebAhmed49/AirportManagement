@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Passangers } from '../_models/Passangers';
 import { AlertifyService } from '../_services/alertify.service';
@@ -11,23 +11,26 @@ import { PassangerService } from '../_services/passanger.service';
   styleUrls: ['./passanger.component.css']
 })
 export class PassangerComponent implements OnInit {
-  passangersList?: Observable<Passangers[]>;
-  passangersList1?: Observable<Passangers[]>;
-  massage="";
+  passangersData?: any;
+  pagination: any;
 
 
   constructor(private passangerService:PassangerService,
-    private router:Router,private alertify:AlertifyService) { }
+    private router:Router,private alertify:AlertifyService, private route: ActivatedRoute) { }
 
+  ngOnInit() {
+    this.route.data.subscribe(data => {
+      console.log(this.passangersData);
+      this.passangersData = data['passangers'].result;
+      console.log('test');
+      console.log(this.passangersData);
 
-  ngOnInit(): void {
-    this.getAllPassangers();
-  }
+      this.pagination = data['passangers'].pagination;
+    });
 
-  getAllPassangers(){
-    this.passangersList1 = this.passangerService.getPassangers();
-    this.passangersList = this.passangersList1;
-  }
+  // getAllPassangers(){
+  //   this.passangersList1 = this.passangerService.getPassangers();
+  //   this.passangersList = this.passangersList1;
+  // }
 }
-
-
+}

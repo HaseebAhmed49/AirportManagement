@@ -22,7 +22,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let passanger of passangersList | async; index as i">
+                                <tr *ngFor="let passanger of passangersData | async; index as i">
                                     <td>{{ passanger.id }}</td>
                                     <td>{{ passanger.firstName }}</td>
                                     <td>{{ passanger.lastName }}</td>

@@ -11,6 +11,7 @@ import { PassangerDetailResolver } from './_resolvers/passanger-detail.resolver'
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { FormsModule } from '@angular/forms';
+import { PassangerListResolver } from './_resolvers/passanger-list.resolver';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [
     AlertifyService,
-    PassangerDetailResolver
+    PassangerDetailResolver,
+    PassangerListResolver
   ],
   bootstrap: [AppComponent]
 })
