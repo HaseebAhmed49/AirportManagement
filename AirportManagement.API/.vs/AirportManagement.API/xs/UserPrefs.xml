@@ -1,36 +1,22 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Helpers/UserParams.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Controllers/PassangerController.cs" relfile="AirportManagement.API/Controllers/PassangerController.cs" line="45" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Controllers/PassangerController.cs">
     <Files>
-      <File FileName="AirportManagement.API/Data/Models/BoardingPass.cs" />
-      <File FileName="AirportManagement.API/Data/Services/BoardingPass/IBoardingPassRepository.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/BoardingPassVM.cs" />
-      <File FileName="AirportManagement.API/Data/Services/BoardingPass/BoardingPassRepository.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/BookingVM.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/BaggageCheckVM.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/FlightManifestVM.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/BaggageVM.cs" />
-      <File FileName="AirportManagement.API/Data/Services/BaggageCheck/BaggageCheckRepository.cs" />
-      <File FileName="AirportManagement.API/Controllers/BoardingPassController.cs" />
-      <File FileName="AirportManagement.API/Program.cs" />
-      <File FileName="AirportManagement.API/Data/Models/Booking.cs" />
-      <File FileName="AirportManagement.API/Data/Models/SecurityCheck.cs" />
-      <File FileName="AirportManagement.API/Data/Models/Airline.cs" />
-      <File FileName="AirportManagement.API/Data/Models/Airport.cs" />
-      <File FileName="AirportManagement.API/Data/Models/Baggage.cs" />
-      <File FileName="AirportManagement.API/Data/Models/BaggageCheck.cs" />
-      <File FileName="AirportManagement.API/Data/Models/FlightManifest.cs" />
-      <File FileName="AirportManagement.API/Data/Models/Flights.cs" />
-      <File FileName="AirportManagement.API/Data/Models/NoFlyList.cs" />
-      <File FileName="AirportManagement.API/Data/Models/Passangers.cs" />
-      <File FileName="AirportManagement.API/appsettings.json" />
-      <File FileName="AirportManagement.API/Properties/launchSettings.json" />
-      <File FileName="AirportManagement.API/Controllers/PassangerController.cs" Line="1" Column="1" />
-      <File FileName="AirportManagement.API/Data/ViewModels/PassangersVM.cs" />
-      <File FileName="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs" />
-      <File FileName="AirportManagement.API/Data/Helpers/PagedList.cs" />
-      <File FileName="AirportManagement.API/Data/Helpers/PaginationHeader.cs" />
-      <File FileName="AirportManagement.API/Data/Helpers/Extensions.cs" Line="16" Column="2" />
-      <File FileName="AirportManagement.API/Data/Helpers/UserParams.cs" Line="13" Column="1" />
+      <File FileName="AirportManagement.API/Data/Services/Passanger/IPassangerRepository.cs" Line="1" Column="1" />
+      <File FileName="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs" Line="60" Column="1" />
+      <File FileName="AirportManagement.API/Controllers/PassangerController.cs" Line="45" Column="1" />
+      <File FileName="AirportManagement.API/Data/Helpers/PagedList.cs" Line="31" Column="1" />
+      <File FileName="AirportManagement.API/Data/Helpers/PaginationHeader.cs" Line="19" Column="32" />
+      <File FileName="AirportManagement.API/Data/Helpers/Extensions.cs" Line="12" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -53,14 +39,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
