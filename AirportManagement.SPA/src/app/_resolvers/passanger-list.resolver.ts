@@ -16,6 +16,7 @@ export class PassangerListResolver implements Resolve<PaginatedResult<Passangers
         private router:Router, private alertify:AlertifyService){}
 
         resolve(route: ActivatedRouteSnapshot): Observable<PaginatedResult<Passangers[]>>{
+            console.log('List Resolver'+this.pageNumber+' '+this.pageSize);
             return this.passangerService.getPassangers(this.pageNumber, this.pageSize).pipe(
                 catchError(error => {
                     console.log(error);

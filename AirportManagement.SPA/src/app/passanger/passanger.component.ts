@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { PaginatedResult } from '../_models/pagination';
 import { Passangers } from '../_models/Passangers';
 import { AlertifyService } from '../_services/alertify.service';
 import { PassangerService } from '../_services/passanger.service';
@@ -11,7 +12,7 @@ import { PassangerService } from '../_services/passanger.service';
   styleUrls: ['./passanger.component.css']
 })
 export class PassangerComponent implements OnInit {
-  passangersData?: any;
+passangersData?: any;
   pagination: any;
 
 
@@ -20,12 +21,11 @@ export class PassangerComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
+      console.log(data);
+      this.passangersData = data['passanger'].result;
       console.log(this.passangersData);
-      this.passangersData = data['passangers'].result;
-      console.log('test');
-      console.log(this.passangersData);
-
-      this.pagination = data['passangers'].pagination;
+      this.pagination = data['passanger'].pagination;
+      console.log(this.pagination);
     });
 
   // getAllPassangers(){
