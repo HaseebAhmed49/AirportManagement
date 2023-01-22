@@ -13,7 +13,7 @@ import { PassangerService } from '../_services/passanger.service';
 })
 export class PassangerComponent implements OnInit {
 passangersData?: any;
-  pagination: any;
+  paginationData: any;
 
 
   constructor(private passangerService:PassangerService,
@@ -24,8 +24,8 @@ passangersData?: any;
       console.log(data);
       this.passangersData = data['passanger'].result;
       console.log(this.passangersData);
-      this.pagination = data['passanger'].pagination;
-      console.log(this.pagination);
+      this.paginationData = data['passanger'].pagination;
+      console.log(this.paginationData);
     });
 
   // getAllPassangers(){

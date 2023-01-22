@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { FormsModule } from '@angular/forms';
 import { PassangerListResolver } from './_resolvers/passanger-list.resolver';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,9 @@ import { PassangerListResolver } from './_resolvers/passanger-list.resolver';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    PaginationModule
   ],
   providers: [
     AlertifyService,
