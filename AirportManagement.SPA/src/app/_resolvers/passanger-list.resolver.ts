@@ -10,7 +10,7 @@ import { PassangerService } from "../_services/passanger.service";
 @Injectable()
 export class PassangerListResolver implements Resolve<PaginatedResult<Passangers[]>>{
     pageNumber = 1;
-    pageSize = 50;
+    pageSize = 5;
 
     constructor(private passangerService: PassangerService, 
         private router:Router, private alertify:AlertifyService){}

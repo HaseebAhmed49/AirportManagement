@@ -44,8 +44,11 @@
             [itemsPerPage]="pagination!.itemsPerPage"
             [(ngModel)]="pagination!.currentPage"
             (pageChanged)="pageChanged($event)"
+            [maxSize]="pagination?.totalPages"
             previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;">
  
 </pagination>
+
+
         </div>
 </div>
