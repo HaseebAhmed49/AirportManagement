@@ -10,6 +10,16 @@
             <div >
                   <div>
                     <div class="alert-success alert" style="text-align: center;"><b>Passangers List</b></div>
+                    
+                    <div class="row justify-content-center">
+                        <form #editForm="ngForm" id="editForm" (ngSubmit)="updateFilter()">
+                            <h4 class="col">Page Size</h4>
+                            <input name="pageSize" rows="6" class="col form-control"
+                            [(ngModel)]="this.pagination!.itemsPerPage"/>
+                            <button form="editForm" class="col btn btn-success btn-block text-center">Save Changes</button>
+                          </form>                          
+                    </div>
+
                     <div class="table-responsive" style="text-align: center;">
                         <table class="table table-hover table-bordered table-striped">
                             <thead>

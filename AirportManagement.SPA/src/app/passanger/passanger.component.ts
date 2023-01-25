@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { PaginatedResult, Pagination } from '../_models/pagination';
@@ -15,6 +16,7 @@ export class PassangerComponent implements OnInit {
 passangersData?: any;
   pagination?: Pagination;
 
+  editForm!: NgForm;
 
   constructor(private passangerService:PassangerService,
     private router:Router,private alertify:AlertifyService, private route: ActivatedRoute) { }
@@ -24,6 +26,11 @@ passangersData?: any;
       this.passangersData = data['passanger'].result;
       this.pagination = data['passanger'].pagination;
     });
+  }
+
+  updateFilter()
+  {
+    this.loadPassangers();
   }
 
   pageChanged(event: any) : void {
