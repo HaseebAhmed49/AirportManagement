@@ -32,6 +32,7 @@ passangersData?: any;
   }
 
   loadPassangers() {
+    console.log(this.pagination?.itemsPerPage);
     this.passangerService.getPassangers(this.pagination!.currentPage, this.pagination!.itemsPerPage)
     .subscribe((res: PaginatedResult<Passangers[]>) => {
       this.passangersData = res.result;
