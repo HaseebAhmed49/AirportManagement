@@ -9,18 +9,35 @@
             <h1 style="text-align: center;">Passangers</h1>
             <div >
                   <div>
-                    <div class="alert-success alert" style="text-align: center;"><b>Passangers List</b></div>
-                    
-                    <div class="row justify-content-center">
-                        <form #editForm="ngForm" id="editForm" (ngSubmit)="updateFilter()">
-                            <h4 class="col">Page Size</h4>
-                            <input name="pageSize" rows="6" class="col form-control"
-                            [(ngModel)]="this.pagination!.itemsPerPage"/>
-                            <button form="editForm" class="col btn btn-success btn-block text-center">Save Changes</button>
-                          </form>                          
-                    </div>
+                    <div class="row alert-success alert" style="text-align: center;"><b>Passangers List</b></div>
+                    <div class="container">
+                        <form class="row justify-content-md-center" #editForm="ngForm" id="editForm" (ngSubmit)="updateFilter()">
+                            <div class="col">
 
-                    <div class="table-responsive" style="text-align: center;">
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                            <div class="col align-right">
+                                <h4>Page Size</h4>
+                            </div>
+                            <div class="col">
+                                <input name="pageSize" rows="6" class="col form-control" [(ngModel)]="this.pagination!.itemsPerPage"/>
+                            </div>
+                            <br/>
+                            <div class="col">
+                                <button form="editForm" class="col btn btn-danger btn-block text-center">Save Changes</button>
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                            <div class="col">
+                                
+                            </div>
+                          </form>
+                    </div>
+<br/>
+                    <div class="row table-responsive" style="text-align: center;">
                         <table class="table table-hover table-bordered table-striped">
                             <thead>
                                 <tr>
