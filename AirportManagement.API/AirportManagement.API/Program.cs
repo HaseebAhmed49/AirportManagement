@@ -6,12 +6,9 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-
 builder.Services.AddControllers();
 
 builder.Services.AddCors();
-
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Name=SQLLiteDBmacOS"));
 
@@ -37,15 +34,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.MapControllers();
 
 SeedData.Seed(app);
 
-
 app.Run();
-
