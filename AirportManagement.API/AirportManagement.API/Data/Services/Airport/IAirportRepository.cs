@@ -1,11 +1,12 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 
 namespace AirportManagement.API.Data.Services
 {
 	public interface IAirportRepository
 	{
-        public Task<List<Airport>> GetAllAirports();
+        public Task<PagedList<Airport>> GetAllAirports(UserParams userParams);
 
         public Task<AirportVM> GetAirportById(int id);
 
@@ -18,4 +19,3 @@ namespace AirportManagement.API.Data.Services
         public Task<Airport> DeleteAirportById(int id);
     }
 }
-
