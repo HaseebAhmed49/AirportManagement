@@ -1,4 +1,5 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -76,7 +77,11 @@ namespace AirportManagement.API.Data.Services
             return await _context.Airlines.FirstOrDefaultAsync(a=> a.Id == id);
         }
 
-        public async Task<List<Airline>> GetAllAirlines() => await _context.Airlines.ToListAsync();
+        public async Task<PagedList<Airline>> GetAllAirlines(UserParams userParams)
+        {
+            var airlines = _context.Airlines;
+            return await PagedList<Airline>.CreateAsync(airlines, userParams.PageNumber, userParams.pageSize);
+        }
 
         public async Task<Airline> UpdateAirlineById(int id, AirlineVM airlineVM)
         {
