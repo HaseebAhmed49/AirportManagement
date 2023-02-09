@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Data.Services;
 using AirportManagement.API.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -38,11 +39,15 @@ namespace AirportManagement.API.Controllers
         }
 
         [HttpGet("Get-All-Baggages")]
-        public async Task<IActionResult> GetAllBaggages()
+        public async Task<IActionResult> GetAllBaggages([FromQuery] UserParams userParams)
         {
             try
             {
-                var baggages = await _baggageRepository.GetAllBaggages();
+                var baggages = await _baggageRepository.GetAllBaggages(userParams);
+
+                Response.AddPagination(baggages.CurrentPage, baggages.PageSize,
+    baggages.TotalCount, baggages.TotalPages);
+
                 if (baggages != null)
                     return Ok(baggages);
                 return NotFound("No Baggages Data Found");

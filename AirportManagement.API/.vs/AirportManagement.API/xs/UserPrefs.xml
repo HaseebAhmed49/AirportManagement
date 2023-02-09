@@ -1,11 +1,6 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
-      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Controllers/AirportsController.cs">
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Data/Services/Airline/AirlineRepository.cs">
     <Files>
       <File FileName="AirportManagement.API/Data/Services/Passanger/IPassangerRepository.cs" />
       <File FileName="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs" />
@@ -17,10 +12,12 @@
       <File FileName="AirportManagement.API/Program.cs" />
       <File FileName="AirportManagement.API/Properties/launchSettings.json" />
       <File FileName="AirportManagement.API/appsettings.json" />
-      <File FileName="AirportManagement.API/Controllers/AirlinesController.cs" Line="1" Column="1" />
+      <File FileName="AirportManagement.API/Controllers/AirlinesController.cs" Line="23" Column="1" />
       <File FileName="AirportManagement.API/Data/Services/Airport/IAirportRepository.cs" Line="9" Column="1" />
-      <File FileName="AirportManagement.API/Data/Services/Airport/AirportRepository.cs" Line="13" Column="4" />
-      <File FileName="AirportManagement.API/Controllers/AirportsController.cs" Line="35" Column="57" />
+      <File FileName="AirportManagement.API/Data/Services/Airport/AirportRepository.cs" Line="120" Column="1" />
+      <File FileName="AirportManagement.API/Controllers/AirportsController.cs" Line="42" Column="1" />
+      <File FileName="AirportManagement.API/Data/Services/Airline/AirlineRepository.cs" Line="100" Column="2" />
+      <File FileName="AirportManagement.API/Data/Services/Airline/IAirLineRepository.cs" Line="9" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,6 +28,9 @@
               <Node name="Data" expanded="True">
                 <Node name="Helpers" expanded="True" />
                 <Node name="Services" expanded="True">
+                  <Node name="Airline" expanded="True">
+                    <Node name="AirlineRepository.cs" selected="True" />
+                  </Node>
                   <Node name="Airport" expanded="True" />
                   <Node name="Passanger" expanded="True" />
                 </Node>
@@ -43,8 +43,13 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="17" column="1" />
+      <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="50" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
