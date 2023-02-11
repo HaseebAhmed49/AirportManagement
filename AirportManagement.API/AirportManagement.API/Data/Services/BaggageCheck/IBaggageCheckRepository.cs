@@ -1,11 +1,12 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 
 namespace AirportManagement.API.Data.Services
 {
 	public interface IBaggageCheckRepository
     {
-        public Task<List<BaggageCheck>> GetAllBaggageChecks();
+        public Task<PagedList<BaggageCheck>> GetAllBaggageChecks(UserParams userParams);
 
         public Task<BaggageCheck> GetBaggageCheckById(int id);
 

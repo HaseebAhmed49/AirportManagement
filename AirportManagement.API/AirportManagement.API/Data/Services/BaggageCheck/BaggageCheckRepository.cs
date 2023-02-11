@@ -1,4 +1,5 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -39,7 +40,12 @@ namespace AirportManagement.API.Data.Services
             return isBaggageCheckExist!;
         }
 
-        public async Task<List<BaggageCheck>> GetAllBaggageChecks() => await _context.BaggageChecks.ToListAsync();
+        public async Task<PagedList<BaggageCheck>> GetAllBaggageChecks(UserParams userParams)
+        {
+            var baggagesCheck = _context.BaggageChecks;
+            return await PagedList<BaggageCheck>.CreateAsync(baggagesCheck, userParams.PageNumber, userParams.pageSize);
+        }
+
 
         public async Task<BaggageCheck> GetBaggageCheckById(int id)
         {
