@@ -1,4 +1,5 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,7 +42,12 @@ namespace AirportManagement.API.Data.Services
             return isFlightExist!;
         }
 
-        public async Task<List<Flights>> GetAllFlights() => await _context.Flights.ToListAsync();
+        public async Task<PagedList<Flights>> GetAllFlights(UserParams userParams)
+        {
+            var flights = _context.Flights;
+            return await PagedList<Flights>.CreateAsync(flights, userParams.PageNumber, userParams.pageSize);
+        }
+
 
         public async Task<Flights> GetFlightById(int id)
         {

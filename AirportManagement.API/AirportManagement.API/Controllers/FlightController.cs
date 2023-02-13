@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Data.Services;
 using AirportManagement.API.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -46,6 +47,26 @@ namespace AirportManagement.API.Controllers
                 if (flights != null)
                     return Ok(flights);
                 return NotFound("No Flights Data Found");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("Get-All-Flights")]
+        public async Task<IActionResult> GetAllFlights([FromQuery] UserParams userParams)
+        {
+            try
+            {
+                var flights = await _flightRepository.GetAllFlights(userParams);
+
+                Response.AddPagination(flights.CurrentPage, flights.PageSize,
+                    flights.TotalCount, flights.TotalPages);
+
+                if (flights != null)
+                    return Ok(flights);
+                return NotFound("No Baggages Check Data Found");
             }
             catch (Exception ex)
             {

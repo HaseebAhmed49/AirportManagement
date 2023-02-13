@@ -1,11 +1,12 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 
 namespace AirportManagement.API.Data.Services
 {
 	public interface IFlightsRepository
 	{
-        public Task<List<Flights>> GetAllFlights();
+        public Task<PagedList<Flights>> GetAllFlights(UserParams userParams);
 
         public Task<Flights> GetFlightById(int id);
 
