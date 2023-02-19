@@ -1,11 +1,12 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 
 namespace AirportManagement.API.Data.Services
 {
 	public interface IBoardingPassRepository
 	{
-        public Task<List<BoardingPass>> GetAllBoardingPass();
+        public Task<PagedList<BoardingPass>> GetAllBoardingPass(UserParams userParams);
 
         public Task<BoardingPass> GetBoardingPassById(int id);
 

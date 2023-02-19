@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Data.Services;
 using AirportManagement.API.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -21,11 +22,15 @@ namespace AirportManagement.API.Controllers
         }
 
         [HttpGet("Get-All-BoardingPass")]
-        public async Task<IActionResult> GetAllBoardingPass()
+        public async Task<IActionResult> GetAllBoardingPass([FromQuery] UserParams userParams)
         {
             try
             {
-                var alLBoardingPass = await _boardingPassRepository.GetAllBoardingPass();
+                var alLBoardingPass = await _boardingPassRepository.GetAllBoardingPass(userParams);
+
+                Response.AddPagination(alLBoardingPass.CurrentPage, alLBoardingPass.PageSize,
+alLBoardingPass.TotalCount, alLBoardingPass.TotalPages);
+
                 if (alLBoardingPass != null)
                     return Ok(alLBoardingPass);
                 return NotFound();

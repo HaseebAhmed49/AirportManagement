@@ -1,4 +1,5 @@
 ﻿using System;
+using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -43,7 +44,11 @@ namespace AirportManagement.API.Data.Services
             return await _context.BoardingPasses.FirstOrDefaultAsync(a => a.Id == id);
         }
 
-        public async Task<List<BoardingPass>> GetAllBoardingPass() => await _context.BoardingPasses.ToListAsync();
+        public async Task<PagedList<BoardingPass>> GetAllBoardingPass(UserParams userParams)
+        {
+            var boardingPassess = _context.BoardingPasses;
+            return await PagedList<BoardingPass>.CreateAsync(boardingPassess, userParams.PageNumber, userParams.pageSize);
+        }
 
         public async Task<BoardingPass> UpdateBoardingPassById(int id, BoardingPassVM boardingPassVM)
         {
