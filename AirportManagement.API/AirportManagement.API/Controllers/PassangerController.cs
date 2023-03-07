@@ -80,8 +80,13 @@ namespace AirportManagement.API.Controllers
         {
             try
             {
-                var newPassanger = await _passangerRepository.AddPassanger(passangerVM);
-                return Created($"api/passangers/Get-passanger-By-Id/{newPassanger.Id}", newPassanger);
+                if (ModelState.IsValid)
+                {
+                    var newPassanger = await _passangerRepository.AddPassanger(passangerVM);
+                    return Created($"api/passangers/Get-passanger-By-Id/{newPassanger.Id}", newPassanger);
+                }
+                else
+                    return BadRequest("Passanger Data is not valid");
             }
             catch (Exception ex)
             {
