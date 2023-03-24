@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HqAikxp6de857RvIDLyw9hdGC+bxCIelpeVmK4++svY0Kzq2+ZtQ5OhCBKJed3mNAtTNdi3Kz0HB2f0VmDAnEQ==",
+  "dgSpecHash": "vRv3Y9QoxoPXmE8vY8b/lDo9x+uxsWi18euyP8kpx2zqxNMW2Q2E4AT6G2hIEQRPVb7+I5e0M8j+BsgCsv8QcQ==",
   "success": true,
   "projectFilePath": "/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/AirportManagement.API.csproj",
   "expectedPackageFiles": [
@@ -89,7 +89,10 @@
     "/Users/haseebahmed/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512",
     "/Users/haseebahmed/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/haseebahmed/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "/Users/haseebahmed/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512"
+    "/Users/haseebahmed/.nuget/packages/system.windows.extensions/5.0.0/system.windows.extensions.5.0.0.nupkg.sha512",
+    "/Users/haseebahmed/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.14/microsoft.aspnetcore.app.ref.6.0.14.nupkg.sha512",
+    "/Users/haseebahmed/.nuget/packages/microsoft.netcore.app.host.osx-x64/6.0.14/microsoft.netcore.app.host.osx-x64.6.0.14.nupkg.sha512",
+    "/Users/haseebahmed/.nuget/packages/microsoft.netcore.app.ref/6.0.14/microsoft.netcore.app.ref.6.0.14.nupkg.sha512"
   ],
   "logs": []
 }

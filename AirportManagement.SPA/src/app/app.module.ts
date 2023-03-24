@@ -10,15 +10,17 @@ import { PassangerDetailsComponent } from './passanger/passanger-details/passang
 import { PassangerDetailResolver } from './_resolvers/passanger-detail.resolver';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PassangerListResolver } from './_resolvers/passanger-list.resolver';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { PassangerInsertComponent } from './passanger/passanger-insert/passanger-insert/passanger-insert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PassangerComponent,
-    PassangerDetailsComponent
+    PassangerDetailsComponent,
+    PassangerInsertComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    PaginationModule
+    PaginationModule,
+    ReactiveFormsModule
   ],
   providers: [
     AlertifyService,

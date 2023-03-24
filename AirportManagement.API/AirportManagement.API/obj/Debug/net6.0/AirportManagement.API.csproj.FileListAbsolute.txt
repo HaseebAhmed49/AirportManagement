@@ -268,7 +268,6 @@
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/AirportManagement.API.deps.json
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/AirportManagement.API.runtimeconfig.json
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/AirportManagement.API.dll
-/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/ref/AirportManagement.API.dll
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/AirportManagement.API.pdb
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/AutoMapper.dll
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
@@ -376,3 +375,9 @@
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/ref/AirportManagement.API.dll
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/AirportManagement.API.pdb
 /Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/AirportManagement.API.genruntimeconfig.cache
+/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/staticwebassets/msbuild.AirportManagement.API.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/staticwebassets/msbuild.build.AirportManagement.API.props
+/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.AirportManagement.API.props
+/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.AirportManagement.API.props
+/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/staticwebassets.pack.json
+/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/obj/Debug/net6.0/refint/AirportManagement.API.dll
