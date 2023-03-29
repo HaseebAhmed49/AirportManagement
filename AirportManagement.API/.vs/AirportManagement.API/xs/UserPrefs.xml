@@ -1,13 +1,9 @@
 ﻿<Properties StartupConfiguration="{4E9CA3E7-4C9C-4BDB-AF7E-DE75B9EED2BF}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="AirportManagement.API/Program.cs">
     <Files>
       <File FileName="AirportManagement.API/Data/Services/Passanger/IPassangerRepository.cs" />
       <File FileName="AirportManagement.API/Data/Services/Passanger/PassangerRepository.cs" />
-      <File FileName="AirportManagement.API/Controllers/PassangerController.cs" Line="79" Column="77" />
+      <File FileName="AirportManagement.API/Controllers/PassangerController.cs" />
       <File FileName="AirportManagement.API/Data/Helpers/PagedList.cs" />
       <File FileName="AirportManagement.API/Data/Helpers/PaginationHeader.cs" />
       <File FileName="AirportManagement.API/Data/Helpers/Extensions.cs" />
@@ -33,7 +29,7 @@
       <File FileName="AirportManagement.API/Controllers/BoardingPassController.cs" />
       <File FileName="AirportManagement.API/Data/Services/BoardingPass/IBoardingPassRepository.cs" />
       <File FileName="AirportManagement.API/Data/Services/BoardingPass/BoardingPassRepository.cs" />
-      <File FileName="AirportManagement.API/Data/ViewModels/PassangersVM.cs" Line="19" Column="1" />
+      <File FileName="AirportManagement.API/Data/ViewModels/PassangersVM.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -52,17 +48,20 @@
               </Node>
               <Node name="Database" expanded="True" />
               <Node name="Properties" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="18" column="1" />
       <Breakpoint file="/Users/haseebahmed/Desktop/dotNet/AirportManagement/AirportManagement.API/AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" relfile="AirportManagement.API/Data/Services/Baggage/BaggageRepository.cs" line="55" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.AirportManagement.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

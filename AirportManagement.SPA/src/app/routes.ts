@@ -9,6 +9,5 @@ import { PassangerListResolver } from "./_resolvers/passanger-list.resolver";
 export const appRoutes: Routes =[
     { path:'passanger', component :PassangerComponent, resolve:{passanger:PassangerListResolver}},
     { path:'passanger/:id', component :PassangerDetailsComponent, resolve:{passanger:PassangerDetailResolver}},
-    { path:'passanger/create', component :PassangerInsertComponent},
 { path:'**', redirectTo : '',pathMatch:'full'}
 ];
