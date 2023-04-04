@@ -5,6 +5,8 @@ namespace AirportManagement.API.Data.Helpers
 	{
 		private const int MaxPageSize = 50;
 
+		public string searchCriteria { get; set; } = "";
+
 		public int PageNumber { get; set; }
 
 		public int pageSize = 10;

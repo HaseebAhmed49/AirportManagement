@@ -55,9 +55,9 @@ namespace AirportManagement.API.Data.Services
 
         public async Task<PagedList<Passangers>> GetAllPassangers(UserParams userParams)
         {
-            var passangers = _context.Passangers;
-            var data = await passangers.Where(x => x.FirstName == userParams.searchCriteria).ToListAsync();
-            return await PagedList<Passangers>.CreateAsync(passangers, userParams.PageNumber, userParams.pageSize);
+            var passangers = _context.Passangers.AsQueryable();
+            var data = passangers.Where(x => x.FirstName.Contains(userParams.searchCriteria)).AsQueryable();
+            return await PagedList<Passangers>.CreateAsync(data, userParams.PageNumber, userParams.pageSize);
         }
 
         public async Task<Passangers> UpdatePassangerById(int id, PassangersVM passangerVM)
