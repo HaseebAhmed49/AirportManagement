@@ -7,6 +7,8 @@ namespace AirportManagement.API.Data.Helpers
 
 		public string searchCriteria { get; set; } = "";
 
+        public string? orderBy { get; set; }
+
 		public int PageNumber { get; set; }
 
 		public int pageSize = 10;

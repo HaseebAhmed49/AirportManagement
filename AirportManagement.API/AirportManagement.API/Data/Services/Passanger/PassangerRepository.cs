@@ -2,6 +2,7 @@
 using AirportManagement.API.Data.Helpers;
 using AirportManagement.API.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AirportManagement.API.Data.Services
 {
@@ -57,6 +58,20 @@ namespace AirportManagement.API.Data.Services
         {
             var passangers = _context.Passangers.AsQueryable();
             var data = passangers.Where(x => x.FirstName.Contains(userParams.searchCriteria)).AsQueryable();
+
+            if (!string.IsNullOrEmpty(userParams.orderBy))
+            {
+                switch (userParams.orderBy)
+                {
+                    case "descending":
+                        data = data.OrderByDescending(u => u.UpdatedAt);
+                        break;
+                    default:
+                        data = data.OrderByDescending(u => u.CreatedAt);
+                        break;
+                }
+            }
+
             return await PagedList<Passangers>.CreateAsync(data, userParams.PageNumber, userParams.pageSize);
         }
 
