@@ -80,7 +80,24 @@ namespace AirportManagement.API.Data.Services
         public async Task<PagedList<Airline>> GetAllAirlines(UserParams userParams)
         {
             var airlines = _context.Airlines;
-            return await PagedList<Airline>.CreateAsync(airlines, userParams.PageNumber, userParams.pageSize);
+
+            var data = airlines.Where(x => x.AirlineName.Contains(userParams.searchCriteria)).AsQueryable();
+
+            if (!string.IsNullOrEmpty(userParams.orderBy))
+            {
+                switch (userParams.orderBy)
+                {
+                    case "descending":
+                        data = data.OrderByDescending(u => u.UpdatedAt);
+                        break;
+                    default:
+                        data = data.OrderByDescending(u => u.CreatedAt);
+                        break;
+                }
+            }
+
+
+            return await PagedList<Airline>.CreateAsync(data, userParams.PageNumber, userParams.pageSize);
         }
 
         public async Task<Airline> UpdateAirlineById(int id, AirlineVM airlineVM)
